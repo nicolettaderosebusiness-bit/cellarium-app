@@ -486,13 +486,22 @@
 '.mcat button{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);border:1px solid var(--ed2);border-radius:99px;padding:3px 9px;transition:color .13s,border-color .13s}',
 '.mcat button:hover{color:var(--t1);border-color:var(--t3)}', '.mcat button.on{color:var(--bronzo);border-color:var(--bronzo)}',
 '.posprop{grid-column:1/-1;display:flex;gap:10px;align-items:center;flex-wrap:wrap}',
-'.speak{display:grid;gap:18px}', '.sp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}',
-'.sp-card h4{font-size:19px;letter-spacing:-.03em;margin:8px 0 4px}', '.sp-sub{font-family:var(--mono);font-size:10.5px;color:var(--t2);margin:0 0 10px}',
+'.speak{display:grid;gap:18px}', '.sp-tabs{width:max-content;max-width:100%}', '.sp-tabs button{padding:9px 16px;font-size:12px}',
+'.sp-filtri{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}', '.sp-filtri .btn{margin-left:auto}',
+'.sp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}', '.sp-lista{display:grid;gap:12px}',
+'.sp-card h4,.sp-prop h4{font-size:19px;letter-spacing:-.03em;margin:8px 0 4px}', '.sp-sub{font-family:var(--mono);font-size:10.5px;color:var(--t2);margin:0 0 10px}',
 '.sp-top{display:flex;justify-content:space-between;align-items:center;gap:8px}', '.sp-when{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3)}',
-'.sp-prezzi{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0 10px;padding:10px 12px;border:1px solid var(--ed);border-radius:10px;background:var(--pan2)}',
-'.sp-prezzi .k{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:3px}', '.sp-prezzi b{font-size:18px;letter-spacing:-.02em}',
-'.sp-chi{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid var(--ed);padding-top:10px;font-size:13px;color:var(--t2)}',
-'.sp-form textarea{width:100%;margin-top:10px;min-height:70px}', '.sp-citta{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap}', '.sp-citta .lbl{margin:0}', '.sp-citta input{max-width:220px}', '.posprop .hint{margin:0}',
+'.sp-stato{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin-left:6px}',
+'.sp-prezzo{margin:8px 0 10px;padding:10px 12px;border:1px solid var(--ed);border-radius:10px;background:var(--pan2)}',
+'.sp-prezzo .k{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:3px}', '.sp-prezzo b{font-size:18px;letter-spacing:-.02em}',
+'.sp-dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:0 0 10px;font-size:12.5px}', '.sp-dl dt{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);padding-top:3px}', '.sp-dl dd{margin:0;color:var(--t2)}',
+'.sp-chi{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid var(--ed);padding-top:10px;font-size:13px;color:var(--t2);flex-wrap:wrap}',
+'.sp-form{margin-top:10px;display:grid;gap:10px}', '.sp-form textarea,.sp-form input[type=text],.sp-form input[type=number],.sp-form select{width:100%}',
+'.sp-recapiti{display:grid;gap:8px;padding:10px 12px;border:1px dashed var(--ed);border-radius:10px}',
+'.sp-foto{margin:-16px -18px 10px;max-height:220px;overflow:hidden;border-bottom:1px solid var(--ed)}', '.sp-foto img{width:100%;height:220px;object-fit:cover;display:block}',
+'.sp-next{font-size:13px;color:var(--t1);margin:8px 0}', '.sp-msg{font-size:13px;color:var(--t2);border-left:2px solid var(--ed);padding:4px 10px;margin:4px 0 8px}',
+'.sp-contatti{border:1px solid var(--acc-s);border-radius:10px;padding:10px 12px;margin:8px 0;background:var(--glass)}', '.sp-contatti b{display:block;margin-bottom:6px}',
+'.sp-foot{margin:6px 0 0;text-align:right}', '.sp-foot .lnk{font-size:11px;color:var(--t3)}', '.sp-profilo h4{font-size:22px;margin:0 0 4px}', '.sp-scheda{display:grid;gap:8px}', '.posprop .hint{margin:0}',
 '.posgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:8px}', '.posgrid label{display:block;min-width:0}', '.posgrid .lbl{display:block;margin-bottom:4px}', '.posgrid input,.posgrid select{width:100%}',
 '@media(max-width:640px){.mrow{grid-template-columns:22px minmax(0,1fr) minmax(0,1fr) 34px;row-gap:8px}.mrow label:nth-of-type(1){grid-column:2/span 2}.mrow label:nth-of-type(2){grid-column:2}.mrow label:nth-of-type(3){grid-column:3}.mrow .x{grid-column:4;grid-row:1}.mnum{grid-row:1}.mbt{display:none}.posgrid{grid-template-columns:1fr}}',
 '.zhd{display:flex;align-items:baseline;gap:12px;padding-bottom:9px;border-bottom:1px solid var(--ed2);margin-bottom:12px}',
@@ -854,6 +863,85 @@
 '  .vis{grid-template-columns:1fr}',
 '  .cmpr .r{grid-template-columns:80px 1fr 90px}',
 '}'
+,
+'/* ---- quick snap and reading state (all screens) ---- */',
+'.fab{display:none;position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:90;align-items:center;gap:10px;padding:0 20px 0 16px;height:56px;border-radius:999px;background:var(--bronzo);color:#191110;border:1px solid var(--bronzo);box-shadow:0 14px 34px -10px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.06) inset;font-weight:700;font-size:15px;letter-spacing:-.01em;transition:transform .12s,box-shadow .12s}',
+'.fab:active{transform:scale(.97)}',
+'.fab svg{width:22px;height:22px;flex:0 0 auto}',
+'.fab .fab-n{position:absolute;top:-6px;right:-4px;min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:var(--t1);color:var(--bg);font-family:var(--mono);font-size:11px;display:flex;align-items:center;justify-content:center;border:2px solid var(--bg)}',
+'.rapido-in{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;overflow:hidden}',
+'.pl.lett{color:var(--bronzo2);border-color:var(--bronzo);animation:pulsa 1.1s ease-in-out infinite}',
+'.pl.ko{color:#F0A3AE;border-color:rgba(224,85,106,.5)}',
+'@keyframes pulsa{50%{opacity:.4}}',
+'.card.coda .mk{line-height:1.35}',
+'.card .bd .mk{height:auto}',
+'.btn.retro{align-self:stretch;justify-content:center;font-size:12px;padding:8px 10px;margin-top:2px}',
+'@media (max-width:640px){',
+'  html{-webkit-text-size-adjust:100%}',
+'  body{font-size:16px}',
+'  button,[role=button],a,.card,.tile{-webkit-tap-highlight-color:transparent;touch-action:manipulation}',
+'  input,select,textarea,.cerca input{font-size:16px}',
+'  .nav-in{overflow-x:auto;overflow-y:hidden;flex-wrap:nowrap;gap:0;padding:0 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch;min-height:50px}',
+'  .nav-in::-webkit-scrollbar{display:none}',
+'  .nav-l{width:auto;flex:0 0 auto;justify-content:flex-start;gap:0}',
+'  .nvb{font-size:11.5px;letter-spacing:.07em;padding:16px 11px 13px;white-space:nowrap;flex:0 0 auto}',
+'  .nvb.esci{font-size:11.5px;margin-left:4px}',
+'  .mast{padding:16px 16px 14px}',
+'  .mast h1{font-size:clamp(30px,9vw,40px);margin-top:8px}',
+'  .cap{gap:10px;margin:2px 0 12px;padding-bottom:12px}',
+'  .eb{font-size:10.5px;letter-spacing:.14em}',
+'  .cerca{margin-bottom:12px}',
+'  .tile{padding:10px 11px 11px}.tile .tn{font-size:21px}.tile .tl{font-size:10.5px;letter-spacing:.05em}',
+'  .tools{position:static;top:auto;padding:10px 14px;gap:8px;backdrop-filter:none;background:transparent}',
+'  .tools #shoot{display:none}',
+'  .tools #bulkbtn{flex:1 1 auto;justify-content:center}',
+'  .tools .search{flex:1 1 100%;min-width:0!important}',
+'  .seg{flex:1 1 100%;overflow-x:auto;scrollbar-width:none}.seg::-webkit-scrollbar{display:none}',
+'  .seg button{flex:1 0 auto;padding:12px 13px;font-size:12.5px}',
+'  .btn{padding:11px 15px;font-size:14px;min-height:42px}',
+'  .btn.sm{min-height:38px;font-size:13px;padding:8px 13px}',
+'  .btn.retro{min-height:40px}',
+'  .chip{min-height:36px;padding:7px 12px;font-size:12.5px}',
+'  .rtog{min-height:42px;padding:9px 15px;font-size:14px}',
+'  .rail{width:min(86vw,340px);flex-basis:auto;padding:16px 16px 70px}',
+'  .flab{font-size:11px}',
+'  .content{padding:14px 14px calc(112px + env(safe-area-inset-bottom))}',
+'  .grid{grid-template-columns:1fr 1fr;gap:10px}',
+'  .vit{aspect-ratio:1/.92}',
+'  .bd{padding:11px 12px 12px;gap:6px}',
+'  .nm{font-size:15.5px;line-height:1.18}',
+'  .mk{font-size:11.5px}.can{font-size:10.5px}',
+'  .pl{font-size:10.5px;padding:4px 8px}',
+'  .stamp{font-size:10.5px;padding:4px 9px}',
+'  .c{font-size:11px;padding:4px 8px}',
+'  .foto-btn{font-size:11px;padding:8px 10px;right:auto;bottom:auto}',
+'  .ov{padding:0;align-items:flex-end}',
+'  .sheet,.sheet.wide{max-width:none;border-radius:20px 20px 0 0;max-height:calc(100dvh - 8px);animation:sale .22s cubic-bezier(.2,.8,.3,1) both}',
+'  .shd{padding:16px 16px 0}.shb{padding:14px 16px 0}.shf{padding:12px 16px calc(14px + env(safe-area-inset-bottom));margin-top:14px}',
+'  .shf .btn{min-height:46px}',
+'  .slots{grid-template-columns:1fr}.slot{min-height:132px}',
+'  .lbl{font-size:11px}',
+'  .lbx{padding:12px 12px calc(16px + env(safe-area-inset-bottom))}',
+'  .toast{bottom:calc(86px + env(safe-area-inset-bottom));font-size:14px;padding:12px 18px;max-width:92vw}',
+'  .fab{display:flex}',
+'  .nav::after{content:\'\';position:absolute;right:0;top:0;bottom:0;width:38px;background:linear-gradient(90deg,rgba(8,7,10,0),rgba(8,7,10,.92));pointer-events:none}',
+'  .lgrid{display:flex;flex-wrap:nowrap;align-items:flex-start;overflow-x:auto;gap:8px;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -16px;padding:0 16px 6px;-webkit-overflow-scrolling:touch}',
+'  .lgrid::-webkit-scrollbar{display:none}',
+'  .lc{flex:0 0 min(60%,236px)!important;min-width:0;height:auto;align-self:flex-start;scroll-snap-align:start}',
+'  .mast:not(.st-catalogo) .cerca,.mast:not(.st-catalogo) .rtog{display:none}',
+'  .lc:has(.duen){flex-basis:min(92%,360px)!important}',
+'  .lc .duen{display:flex;flex-wrap:nowrap;gap:16px;align-items:flex-start}',
+'  .card .foto-btn{position:static;width:100%;margin-top:2px}',
+'  .lc .c{font-size:11px;letter-spacing:.06em}',
+'  .chk{min-height:40px;font-size:14px}.chk input{width:20px;height:20px;accent-color:var(--bronzo);flex:0 0 auto}',
+'  .lnk{font-size:13px;padding:8px 0;display:inline-block}',
+'  .nvb.esci{padding:16px 12px 13px}',
+'  .x{width:40px;height:40px;border-radius:999px}',
+'  #sp-ricarica{min-height:38px;padding:8px 12px}',
+'  .sp-tabs{overflow-x:auto;scrollbar-width:none;flex-wrap:nowrap}.sp-tabs::-webkit-scrollbar{display:none}',
+'  .sp-tabs button{flex:0 0 auto;min-height:42px}',
+'}',
+'@keyframes sale{from{transform:translateY(28px);opacity:0}to{transform:none;opacity:1}}'
     ].join('\n');
   }
 
@@ -1264,7 +1352,7 @@
       '<span class="dash-note">Net values: auction estimate, ' + Math.round(resaAsta() * 100) + '% of list price</span></div>' +
       '<div class="tiles">' + tiles + '</div>' +
       (sel ? '<p class="dash-x"><strong>' + SEGNALI[sel].et + '.</strong> ' + SPIEGA[sel] + ' <button type="button" class="lnk" id="seg-off">show all</button></p>' : '') +
-      '<p class="disc">The signal says when a bottle is at its best, not what to do with your money. The sale, if you want it, goes through the Caveau desk: Caveau never buys on its own account.</p>' +
+      '<p class="disc">The signal says when a bottle is at its best, not what to do with your money. Selling, if you want to, is your call: you can put it on the Speakeasy board and talk directly with another member. Caveau never buys on its own account.</p>' +
       '</section>';
   }
 
@@ -1405,165 +1493,513 @@
   }
 
 
-  /* ======================= SPEAKEASY =======================
-     La cantina di tutti, senza il nome di nessuno. Ogni bottiglia ha uno
-     stato di visibilita' che decide il proprietario: Privata (default),
-     Segnalata (il Club la vede in forma anonima, senza prezzo ne' nome),
-     In vendita (riserva, verifica, passaporto, Release). Gli aggregati
-     compaiono solo sopra la soglia di cinque proprietari distinti (k=5).
-     I dati del Club qui sotto sono DIMOSTRATIVI: il Club vero vive sul
-     server di Caveau, questo archivio resta privato. */
-  var CLUB = {
-    privata:   { et: 'Private',    d: 'Only you. It does not count in the Speakeasy aggregates.' },
-    segnalata: { et: 'Flagged',  d: 'Members see it anonymously, with no price or name. You receive demand alerts.' },
-    vendita:   { et: 'For sale', d: 'You set the reserve, the Desk verifies, the lot enters the Release.' }
-  };
-  function clubDi(b) { return CLUB[b.club] ? b.club : 'privata'; }
-  function clubTag(b) {
-    var c = clubDi(b);
-    if (c === 'privata' || inCoda(b) || uscita(b)) return '';
-    return '<span class="clubtag' + (c === 'vendita' ? ' vend' : '') + '">' + CLUB[c].et + '</span>';
-  }
-  function visButtons(cur) {
-    return '<div class="vis">' + ['privata', 'segnalata', 'vendita'].map(function (k) {
-      return '<button type="button" class="' + (k === 'segnalata' ? 'seg' : k === 'vendita' ? 'ven' : '') + (cur === k ? ' on' : '') + '" data-vis="' + k + '"><span class="vt"><i></i>' + CLUB[k].et + '</span><small>' + CLUB[k].d + '</small></button>';
-    }).join('') + '</div>';
-  }
-  var CLUB_DEMO = {
-    membri: 112, etichette: 212, barometro: 128.4, delta: '+2.1%', desiderata: 57, release: '09',
-    medie: { 'Tuscany': 29, 'Piedmont': 18, 'Champagne': 21, 'Scotland': 9, 'Burgundy': 15, 'Veneto': 8 },
-    baro: [100, 103, 101, 106, 109, 108, 112, 115, 114, 118, 121, 120, 124, 123, 126, 125, 128, 128.4],
-    lotti: [
-      { id: 'IT-BOL-0081', liv: 'Level 3 · in custody', y: '1985', n: 'Sassicaia · Tenuta San Guido', f: '3 × 75 cl · riserva protetta', p: 2850, s: '14 offers · 48h preview' },
-      { id: 'FR-BRG-0237', liv: 'Livello 2 · verificato', y: '1996', n: 'La Tâche · Domaine de la Romanée-Conti', f: '1 × 75 cl · riserva protetta', p: 3900, s: '18 offerte' },
-      { id: 'IT-TOS-0412', liv: 'Level 3 · in custody', y: '2001', n: 'Masseto · Tenuta dell’Ornellaia', f: '6 × 75 cl · OWC · private desk', p: 6400, s: 'matching in progress' }
-    ],
-    feed: [['14:42:18', 'Offer received · IT-BOL-0081', '+ 150 €'], ['14:39:04', 'Private indication · FR-BDX-0719', '10.8k'], ['14:31:52', 'Dossier unlocked · SC-ISL-0744', 'member 044'], ['14:24:11', 'Reserve met · FR-BRG-0237', '18 offerte'], ['14:18:37', 'Condition report accepted · SC-SPE-0194', 'desk']],
-    aggr: [['Sassicaia 2018', 11, '20–40 bt', '265 €', 'listino · 3 fonti', '+4.9%', 6], ['Tignanello 2015', 9, '20–40 bt', '165 €', 'listino · 2 fonti', '+2.1%', 4], ['Barolo Cannubi 2016 · Scavino', 7, '10–20 bt', '128 €', 'listino · 2 fonti', '+1.6%', 2], ['Dom Pérignon 2012', 14, '40–80 bt', '235 €', 'realised · partner auction', '+3.3%', 9], ['Macallan Sherry Oak 18', 6, '5–10 bt', '410 €', 'realised · auction', '+11.2%', 2]],
-    eventi: [['19 SET', 'Florence · Private table · Bolgheri 1995–2015', 'Ten vintages, twelve guests, a single table.', '4 posti'], ['04 OTT', 'Langhe · Cellar table no. 03', 'Dinner with the producer, 18 seats.', '7 posti'], ['07 NOV', 'Lake Como · Salon · Cellars and succession', 'A conversation with families, advisors and appraisers: the Handover told by those who have made it.', '16 posti']]
-  };
-  function regione(b) { return area(b); }
-  function stanzaClubDemo() {
-    var inC = STATE.bottles.filter(function (b) { return inCantina(b) && !inCoda(b); });
-    var segn = inC.filter(function (b) { return clubDi(b) !== 'privata'; });
-    var D = CLUB_DEMO;
-    // domanda per le tue bottiglie: le segnalate ricevono avvisi (dimostrativi)
-    var domanda = segn.slice(0, 3).map(function (b, i) {
-      var n = [3, 2, 1][i] || 1;
-      return '<div class="ccard" style="' + blkVars(b) + '"><span class="mono" style="font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--t3)">Desiderata · ' + n + (n === 1 ? ' member' : ' members') + ' · ' + CLUB[clubDi(b)].et + '</span>' +
-        '<h4>' + escHtml(b.nome || 'Unnamed') + (etaTesto(b) ? ' ' + etaTesto(b) : '') + '</h4>' +
-        '<p>' + n + (n === 1 ? ' member is looking for it' : ' members are looking for it') + '. Il richiedente non sa chi sei: risponde il desk, e resta l’unico intermediario fino alla chiusura. ' + escHtml(perche(b)) + '</p>' +
-        '<div class="row"><span class="mono" style="font-family:var(--mono);font-size:10px;color:var(--t3)">' + fmtM(vetrina(b)) + ' · ' + escHtml(fonteQuot(b) || 'listino') + '</span><span class="grp"><button type="button" class="btn sm" data-open="' + b.id + '">Open the card</button><button type="button" class="btn sm pri" data-desk="' + escHtml(b.nome) + '">Reply via the Desk</button></span></div></div>';
-    }).join('');
-    if (!segn.length) domanda = '<div class="ccard"><h4>No bottle flagged to the Club</h4><p>Open a card and choose <strong>Flagged</strong>: the Club will see it anonymously and you will receive demand alerts. You can go back to Private whenever you wish.</p></div>';
-    // la tua cantina rispetto al club
-    var byR = {}, tot = 0;
-    inC.forEach(function (b) { var v = (vetrina(b) || 0) * qty(b); byR[regione(b)] = (byR[regione(b)] || 0) + v; tot += v; });
-    var chiavi = Object.keys(D.medie).concat(Object.keys(byR).filter(function (k) { return !D.medie[k]; })).slice(0, 7);
-    var cmp = chiavi.map(function (k) {
-      var me = tot ? Math.round((byR[k] || 0) / tot * 100) : 0, cl = D.medie[k] || 0;
-      return '<div class="r"><span class="mono" style="font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--t2)">' + escHtml(k) + '</span><div class="tr"><b style="width:' + me + '%"></b><i style="left:' + cl + '%"></i></div><span class="v">tu ' + me + '% · club ' + cl + '%</span></div>';
-    }).join('');
-    var mx = Math.max.apply(null, D.baro), mn = Math.min.apply(null, D.baro) - 5;
-    var baro = D.baro.map(function (v, i) { return '<i class="' + (i % 4 === 3 ? 'b' : '') + '" style="height:' + Math.round((v - mn) / (mx - mn) * 100) + '%" title="W' + (18 + i) + ' · ' + v + '"></i>'; }).join('');
-    return capitolo(STANZE[3], 'The Club’s aggregated cellar: release previews, wish lists, Society and exchanges between members, in private and on trust, with the Desk as the sole intermediary.') + '<div class="demo-band">Demonstration preview · the figures below are not real: the Speakeasy fills up as members join</div>' +
-      '<div class="kbox"><span class="k">k=5</span><span>A label appears in the aggregates only if at least five distinct members hold it in Flagged status. Below that threshold the data does not exist for anyone, not even for the Desk. Location, price paid and exact quantity never leave this archive. <strong style="color:var(--t1)">The real Speakeasy lives on the Caveau server and opens with your credentials from the site or from here: the figures below are for demonstration.</strong></span></div>' +
-      '<div class="lgrid" style="margin-bottom:22px">' +
-        '<div class="lc" style="--ac:var(--ambra)"><div class="n tab">' + D.membri + '</div><div class="c">Members</div></div>' +
-        '<div class="lc" style="--ac:var(--ambra)"><div class="n tab">' + D.etichette + '</div><div class="c">Labels above threshold</div></div>' +
-        '<div class="lc" style="--ac:var(--teal)"><div class="n tab">' + D.barometro + '<span class="up pos">' + D.delta + '</span></div><div class="c">Club Barometer · internal indicator</div></div>' +
-        '<div class="lc" style="--ac:var(--cremisi)"><div class="n tab">' + D.desiderata + '</div><div class="c">Open wish lists</div></div>' +
-        '<div class="lc" style="--ac:var(--neutro)"><div class="n tab">' + segn.length + '</div><div class="c">Your flagged bottles</div></div>' +
-      '</div>' +
-      '<section class="blk"><header class="blkh"><h3>There is demand for your bottles</h3><p>Visible only to you. The requester does not know who you are.</p></header><div class="cgrid">' + domanda + '</div></section>' +
-      '<section class="blk"><header class="blkh"><h3>Your cellar compared with the members</h3><p>Share of list value by area: the bar is you, the mark is the members’ average. Not advice: a map.</p></header><div class="ccard"><div class="cmpr">' + cmp + '</div></div></section>' +
-      '<section class="blk"><header class="blkh"><h3>Speakeasy Barometer</h3><p>Last 18 weeks, base 100. Weighted on self-declared quantity bands of the labels above threshold, with list prices labelled by source. An index based on realised transactions will be published only after 300 completed sales.</p></header><div class="ccard"><div class="bars">' + baro + '</div><div class="xlab"><span>W18</span><span>W22</span><span>W26</span><span>W30</span><span>W35</span></div></div></section>' +
-      '<section class="blk"><header class="blkh"><h3>Release ' + D.release + ' · 48-hour preview</h3><p>Monday preview, Wednesday offers open to all, Friday 20:00 close. Only lots with a Level 2 or 3 passport. Buyer’s premium 5%, payment in escrow via a regulated partner. The reserve remains the owner’s. Caveau never buys on its own account, nor through associates.</p></header><div class="cgrid">' +
-        D.lotti.map(function (l) { return '<div class="lot"><span class="mono" style="font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--t3)">' + l.id + ' · ' + l.liv + '</span><div class="y">' + l.y + '</div><div class="n">' + l.n + '</div><span class="mono" style="font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--t3)">' + l.f + '</span><div class="m"><b class="tab">' + fmtM(l.p) + '</b><span style="color:var(--pos)">' + l.s + '</span></div></div>'; }).join('') +
-      '</div><div class="ccard" style="margin-top:14px"><span class="mono" style="font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--t3)">Room activity · anonymised</span><div class="feed">' +
-        D.feed.map(function (f) { return '<div class="it"><span class="t">' + f[0] + '</span><span>' + f[1] + '</span><span class="kk">' + f[2] + '</span></div>'; }).join('') + '</div></div></section>' +
-      '<section class="blk"><header class="blkh"><h3>Aggregates above threshold</h3><p>Bands, not quantities. Every price carries its nature: list, realised, estimate.</p></header><div class="tw"><table style="min-width:760px"><thead><tr><th>Label</th><th>Owners</th><th>Quantity band</th><th>Median list price</th><th>Nature of price</th><th>Δ 90 days</th><th>Wish list</th></tr></thead><tbody>' +
-        D.aggr.map(function (a) { return '<tr><td><span class="tnm">' + a[0] + '</span></td><td class="tab">' + a[1] + '</td><td class="tab">' + a[2] + '</td><td class="tab">' + a[3] + '</td><td class="tab">' + a[4] + '</td><td class="tab" style="color:var(--pos)">' + a[5] + '</td><td class="tab">' + a[6] + '</td></tr>'; }).join('') +
-        '<tr class="hidden-row"><td>Barbaresco Gaja 2001</td><td colspan="6">Below threshold: fewer than five owners. The data is not available in the Speakeasy. The owner receives demand alerts in private.</td></tr>' +
-      '</tbody></table></div></section>' +
-      '<section class="blk"><header class="blkh"><h3>Caveau Society</h3><p>The market opens the door. The table builds the circle.</p></header><div class="ccard">' +
-        D.eventi.map(function (e) { return '<div class="ev"><span class="d">' + e[0] + '</span><div><b>' + e[1] + '</b><small>' + e[2] + '</small></div><button type="button" class="btn sm" data-toast="Request sent · ' + e[3] + ' disponibili">Prenota · ' + e[3] + '</button></div>'; }).join('') +
-      '</div></section>';
-  }
-
-  /* ======================= PROFILO, SPEAKEASY E SOCI =======================
-     Piano unico: chi è dentro è nel club. Lo Speakeasy è la bacheca fra soci,
-     l'elenco dei soci è la sala. I fondatori vedono gli annunci 48 ore prima. */
-  var PROFILO = { piano: 'club', stato_candidatura: 'nessuna', nome: '', email: '', fondatore: false, citta: '' };
-  var BACHECA = null, SOCI = null, spCaricando = false, contattoId = null;
+  /* ======================= PROFILO E SPEAKEASY =======================
+     Lo Speakeasy è la bacheca riservata del club: solo le bottiglie che un
+     membro ha scelto di condividere, vino e distillati, in vendita a prezzo
+     totale del lotto oppure in scambio. Tre schede: Bacheca, Le mie proposte,
+     Membri. Il profilo personale sta nel menu in alto.
+     Niente funzioni social: nessun contatore pubblico, like, classifica o
+     reputazione. I recapiti si rivelano solo alle due parti, dopo che
+     entrambe hanno accettato, e solo quelli che ciascuna ha scelto.
+     Tutto ciò che si legge o si scrive passa dalle funzioni del database:
+     decidono loro cosa mostrare a chi. */
+  var PROFILO = { piano: 'club', stato_candidatura: 'nessuna', nome: '', email: '', fondatore: false, citta: '', citta_visibile: false, paese: '', lingua: 'it', interessi: [], descrizione: '', completo: false };
   function clubAttivo() { return true; }
-  var ANNUNCI = { vendita: 'For sale', scambio: 'For exchange' };
-  function tagAnnuncio(b) {
-    if (!b.annuncio || !ANNUNCI[b.annuncio] || inCoda(b) || uscita(b)) return '';
-    return '<span class="clubtag' + (b.annuncio === 'vendita' ? ' vend' : '') + '">' + ANNUNCI[b.annuncio] + '</span>';
-  }
+  var SP = { cfg: null, bacheca: null, proposte: null, membri: null, membro: null, foto: {}, contatti: {}, caricando: false };
+  var spTab = 'bacheca', spSub = 'ricevute', spFiltro = { tipo: '', categoria: '' };
+  var spForm = null, spInteresse = null, spAzione = null, spMembroId = null, profiloOpen = false, spDopoProfilo = null, spOccupato = false;
+  var SP_TIPO = { vendo: 'Selling', scambio: 'Swap' };
+  var SP_CAT = { vino: 'Vino', distillato: 'Spirit' };
+  var SP_SOTTO = { vino: ['Rosso', 'Bianco', 'Rosé', 'Spumante', 'Sweet', 'Fortified'], distillato: ['Whisky', 'Rum', 'Cognac', 'Armagnac', 'Grappa', 'Gin', 'Other spirit'] };
+  var SP_PAESI = ['Italia', 'Francia', 'Svizzera', 'Regno Unito', 'Germania', 'Spagna', 'Portogallo', 'Austria', 'Belgio', 'Paesi Bassi', 'Stati Uniti', 'Giappone', 'Singapore', 'Emirati Arabi Uniti', 'Monaco'];
+  var SP_STATO_ANN = { attivo: 'On the board', in_trattativa: 'In negotiation', in_pausa: 'Paused · your call', ritirato: 'Withdrawn', scaduto: 'Expired', concluso: 'Concluded' };
+  var SP_STATO_INT = { inviato: 'Sent', controproposto: 'Counter-offer', accettato: 'Contact details available', chiuso: 'Closed', declinato: 'Declined', rifiutato: 'Refused', ritirato: 'Withdrawn', superato: 'Superata · i termini sono cambiati', in_attesa: 'Waiting · another proposal is in negotiation', da_riconfermare: 'To be reconfirmed', decaduto: 'Lapsed' };
+  var SP_ESITO = { venduta: 'Sold', scambiata: 'Swapped', non_conclusa: 'Not concluded' };
+
+  function spReset() { SP.bacheca = null; SP.proposte = null; SP.membri = null; SP.membro = null; SP.contatti = {}; }
   function caricaSpeakeasy() {
-    if (!window.CELL || spCaricando) return;
-    spCaricando = true;
-    Promise.all([CELL.bacheca(), CELL.soci()]).then(function (r) { BACHECA = r[0] || []; SOCI = r[1] || []; spCaricando = false; render(); })
-      .catch(function (e) { spCaricando = false; BACHECA = BACHECA || []; SOCI = SOCI || []; toast((e && e.message) || 'Speakeasy unavailable'); render(); });
+    if (!window.CELL || SP.caricando) return;
+    SP.caricando = true;
+    CELL.speakeasy().then(function (r) {
+      SP.cfg = r.cfg || {}; SP.bacheca = r.bacheca || []; SP.proposte = r.proposte || { miei_annunci: [], ricevute: [], inviate: [] }; SP.membri = r.membri || [];
+      PROFILO.completo = !!(SP.cfg && SP.cfg.profilo_completo);
+      SP.caricando = false; render(); spFirmaFoto();
+    }).catch(function (e) {
+      SP.caricando = false; SP.cfg = SP.cfg || { stato: 'aperto' }; SP.bacheca = SP.bacheca || []; SP.proposte = SP.proposte || { miei_annunci: [], ricevute: [], inviate: [] }; SP.membri = SP.membri || [];
+      toast((e && e.message) || 'Speakeasy unavailable'); render();
+    });
+  }
+  function spFirmaFoto() {
+    var p = [];
+    function agg(a) { if (a && a.foto_percorso && !SP.foto[a.foto_percorso] && p.indexOf(a.foto_percorso) < 0) p.push(a.foto_percorso); }
+    (SP.bacheca || []).forEach(agg);
+    if (SP.proposte) { (SP.proposte.miei_annunci || []).forEach(agg); (SP.proposte.ricevute || []).concat(SP.proposte.inviate || []).forEach(function (i) { agg(i.annuncio); }); }
+    if (SP.membro) (SP.membro.annunci || []).forEach(agg);
+    if (!p.length || !window.CELL) return;
+    CELL.spFotoUrl(p).then(function (m) { var n = 0; Object.keys(m || {}).forEach(function (k) { SP.foto[k] = m[k]; n++; }); if (n) render(); }).catch(function () {});
+  }
+  function spStato() { return (SP.cfg && SP.cfg.stato) || 'aperto'; }
+  function spAperto() { return spStato() === 'aperto'; }
+  function mieiAnnunci() { return (SP.proposte && SP.proposte.miei_annunci) || []; }
+  function annuncioDiBottiglia(id) { return mieiAnnunci().filter(function (a) { return a.bottiglia_id === id && (a.stato === 'attivo' || a.stato === 'in_trattativa' || a.stato === 'in_pausa'); })[0] || null; }
+  function tagAnnuncio(b) {
+    if (inCoda(b) || uscita(b)) return '';
+    var a = annuncioDiBottiglia(b.id);
+    return a ? '<span class="clubtag' + (a.tipo === 'vendo' ? ' vend' : '') + '">' + (a.stato === 'in_trattativa' ? 'In negotiation' : 'On the board') + '</span>' : '';
   }
   function giorniFa(iso) {
     if (!iso) return '';
     var g = Math.floor((Date.now() - new Date(iso).getTime()) / 86400000);
     return g <= 0 ? 'oggi' : g === 1 ? 'ieri' : g + ' giorni fa';
   }
-  function cardAnnuncio(b) {
-    var chi = b.mia ? 'Your bottle' : (b.socio_nome ? escHtml(b.socio_nome) + (b.socio_citta ? ' · ' + escHtml(b.socio_citta) : '') : 'Anonymous member');
-    var titolo = escHtml(b.nome || 'Unnamed') + (b.annata && b.annata !== 'NAS' ? ' ' + escHtml(b.annata) : '') + (b.eta ? ' · ' + escHtml(b.eta) + ' years' : '');
-    var sotto = [b.produttore, b.tipologia, b.colore, b.formato, b.provenienza].filter(Boolean).map(escHtml).join(' · ');
-    var aperto = contattoId === b.bottiglia_id;
-    return '<div class="ccard sp-card"><div class="sp-top"><span class="clubtag' + (b.annuncio === 'vendita' ? ' vend' : '') + '">' + (ANNUNCI[b.annuncio] || '') + '</span><span class="sp-when">' + giorniFa(b.annunciata_il) + '</span></div>' +
-      '<h4>' + titolo + '</h4><p class="sp-sub">' + sotto + '</p>' +
-      '<div class="sp-prezzi"><div><span class="k">Estimated value outside</span><b>' + (b.valore_attuale != null ? fmtM(b.valore_attuale) : '—') + '</b></div><div><span class="k">' + (b.annuncio === 'scambio' ? 'Proposed value' : 'Price between members') + '</span><b>' + (b.prezzo_soci != null ? fmtM(b.prezzo_soci) : 'to be agreed') + '</b></div></div>' +
-      '<div class="sp-chi"><span>' + chi + '</span>' + (b.mia ? '<span class="sp-when">modificala dal catalogo</span>' : (aperto ? '' : '<button type="button" class="btn sm pri" data-contatta="' + b.bottiglia_id + '">Write to the member</button>')) + '</div>' +
-      (aperto ? '<div class="sp-form"><textarea id="sp-testo" rows="3" placeholder="Write to the member: what interests you, where you are, when you can. The Desk is in copy and, if you wish, proposes three dates for the handover."></textarea><div class="row" style="margin-top:8px"><button type="button" class="btn sm gho" data-contatta-annulla>Annulla</button><button type="button" class="btn sm pri" id="sp-invia" data-bott="' + b.bottiglia_id + '">Send</button></div></div>' : '') +
-      '</div>';
+  function giorniA(iso) { return iso ? Math.ceil((new Date(iso).getTime() - Date.now()) / 86400000) : null; }
+  function fmtE(n) { return n == null ? '—' : fmtM(Number(n)); }
+  function spNomeAnnuncio(a) { return escHtml(a.nome || 'Unnamed') + (a.annata ? ' ' + escHtml(a.annata) : ''); }
+  function spSotto(a) { return [a.produttore, SP_CAT[a.categoria], a.sottotipo, a.formato].filter(Boolean).map(escHtml).join(' · '); }
+  function spLotto(a) { return (a.lotto_quantita > 1 ? a.lotto_quantita + ' bottles' : '1 bottle') + (a.lotto_descrizione ? ' · ' + escHtml(a.lotto_descrizione) : ''); }
+  function spPrezzoRiga(a) {
+    return a.tipo === 'vendo'
+      ? '<div class="sp-prezzo"><span class="k">Total price for the lot</span><b>' + fmtE(a.prezzo_totale) + '</b></div>'
+      : '<div class="sp-prezzo"><span class="k">Seeks in exchange</span><b>' + (a.cerco ? escHtml(a.cerco) : 'aperto a proposte') + '</b></div>';
   }
+  function spFoto(a, cls) {
+    var u = a.foto_percorso && SP.foto[a.foto_percorso];
+    return u ? '<div class="sp-foto' + (cls ? ' ' + cls : '') + '"><img src="' + u + '" alt="" loading="lazy"></div>' : '';
+  }
+  function daGestire() {
+    if (!SP.proposte) return 0;
+    var n = 0;
+    (SP.proposte.ricevute || []).forEach(function (i) { if (i.stato === 'inviato' || (i.stato === 'accettato' && !i.esito)) n++; });
+    (SP.proposte.inviate || []).forEach(function (i) { if (i.stato === 'controproposto' || i.stato === 'da_riconfermare' || (i.stato === 'accettato' && !i.esito)) n++; });
+    mieiAnnunci().forEach(function (a) { if (a.stato === 'in_pausa') n++; });
+    return n;
+  }
+  function pendenteSu(annuncioId) {
+    return ((SP.proposte && SP.proposte.inviate) || []).filter(function (i) { return i.annuncio_id === annuncioId && ['inviato', 'controproposto', 'in_attesa', 'da_riconfermare', 'accettato'].indexOf(i.stato) >= 0; })[0] || null;
+  }
+  function richiedeProfilo(fn) {
+    if (PROFILO.completo) { fn(); return; }
+    spDopoProfilo = fn; profiloOpen = true; render();
+  }
+  function spBanner() {
+    var st = spStato();
+    if (st === 'sospeso') return '<div class="kbox"><span class="k">⏸</span><span>The Speakeasy is paused: no new listings or proposals for now. Contact details already shared and your proposals stay where they are.</span></div>';
+    if (st === 'chiuso') return '<div class="kbox"><span class="k">●</span><span>The Speakeasy is closed. You can still find your proposals and the contact details already shared under My proposals.</span></div>';
+    return '';
+  }
+  function recapitiCampi(pref, valori) {
+    var v = valori || {};
+    return '<div class="sp-recapiti"><span class="lbl">How the other member can reach you</span>' +
+      '<label class="chk"><input type="checkbox" id="' + pref + '-email"' + (v.email_ok === false ? '' : ' checked') + '> My email</label>' +
+      '<div class="posgrid"><label><span class="lbl">Phone or messaging</span><input type="text" id="' + pref + '-tel" value="' + escHtml(v.telefono || '') + '" placeholder="facoltativo" autocomplete="off"></label>' +
+      '<label><span class="lbl">Other contact</span><input type="text" id="' + pref + '-altro" value="' + escHtml(v.altro || '') + '" placeholder="facoltativo"></label></div>' +
+      '<p class="hint">Only the other member sees them, and only if you both accept. Caveau shows them to no one else and never puts them in an email.</p></div>';
+  }
+  function leggiRecapiti(pref) {
+    var e = document.getElementById(pref + '-email'), t = document.getElementById(pref + '-tel'), a = document.getElementById(pref + '-altro');
+    return { email_ok: e ? !!e.checked : true, telefono: t ? t.value.trim() : '', altro: a ? a.value.trim() : '' };
+  }
+
+  /* ----------------------------------------------------------- la stanza */
   function stanzaClub() {
     var z = STANZE[3];
-    if (!BACHECA) { caricaSpeakeasy(); return capitolo(z, 'The members’ private board.') + '<p class="disc">Opening the Speakeasy…</p>'; }
-    var altre = BACHECA.filter(function (b) { return !b.mia; }), mie = BACHECA.filter(function (b) { return b.mia; });
-    var intro = 'The members’ private board: the bottles someone puts up for sale or exchange, with the estimated value outside and the price between members. You write to the member; agreement, payment and delivery are between you. Caveau does not buy, sell or take commissions.';
-    var bacheca = altre.length ? '<div class="sp-grid">' + altre.map(cardAnnuncio).join('') + '</div>' :
-      '<div class="ccard"><h4>No bottles on the board, for now.</h4><p>When a member puts a bottle up for sale or exchange from its sheet, it appears here' + (PROFILO.fondatore ? '' : ' after 48 hours: founding members see it first') + '.</p></div>';
-    var mieHtml = mie.length ? '<div class="sp-grid">' + mie.map(cardAnnuncio).join('') + '</div>' :
-      '<p class="disc">You have no bottles on the board. Open a bottle’s sheet and choose <strong>For sale</strong> or <strong>For exchange</strong>.</p>';
-    var soci = (SOCI || []).map(function (s) {
-      return '<tr><td><span class="tnm">' + escHtml(s.nome || '—') + '</span>' + (s.fondatore ? ' <span class="clubtag">Fondatore</span>' : '') + '</td><td>' + escHtml(s.citta || '—') + '</td><td>' + (s.dal ? fmtD(String(s.dal).slice(0, 10)) : '—') + '</td><td class="r">' + (s.bottiglie || 0) + '</td></tr>';
+    if (!SP.proposte) { caricaSpeakeasy(); return capitolo(z, 'The members’ private board.') + '<p class="disc">Opening the Speakeasy…</p>'; }
+    var intro = 'The bottles members have chosen to share, wine and spirits, for sale or swap. You talk among people the club knows: agreement, delivery and payment are between you. Caveau does not buy, sell or take a cut.';
+    var n = daGestire();
+    var tabs = '<div class="seg sp-tabs">' +
+      '<button type="button"' + (spTab === 'bacheca' ? ' class="on"' : '') + ' data-sp-tab="bacheca">Bacheca</button>' +
+      '<button type="button"' + (spTab === 'proposte' ? ' class="on"' : '') + ' data-sp-tab="proposte">My proposals' + (n ? ' · ' + n : '') + '</button>' +
+      '<button type="button"' + (spTab === 'membri' ? ' class="on"' : '') + ' data-sp-tab="membri">Members</button></div>';
+    return capitolo(z, intro) + spBanner() + '<div class="speak">' + tabs +
+      (spTab === 'bacheca' ? tabBacheca() : spTab === 'proposte' ? tabProposte() : tabMembri()) +
+      '<p class="disc"><button type="button" class="lnk" id="sp-ricarica">Aggiorna</button></p></div>';
+  }
+
+  /* ------------------------------------------------------------- bacheca */
+  function tabBacheca() {
+    var tutti = SP.bacheca || [];
+    var l = tutti.filter(function (a) { return (!spFiltro.tipo || a.tipo === spFiltro.tipo) && (!spFiltro.categoria || a.categoria === spFiltro.categoria); });
+    var filtri = '<div class="sp-filtri">' +
+      '<div class="seg"><button type="button"' + (!spFiltro.tipo ? ' class="on"' : '') + ' data-sp-filtro="tipo:">All</button><button type="button"' + (spFiltro.tipo === 'vendo' ? ' class="on"' : '') + ' data-sp-filtro="tipo:vendo">For sale</button><button type="button"' + (spFiltro.tipo === 'scambio' ? ' class="on"' : '') + ' data-sp-filtro="tipo:scambio">For swap</button></div>' +
+      '<div class="seg"><button type="button"' + (!spFiltro.categoria ? ' class="on"' : '') + ' data-sp-filtro="categoria:">Wine and spirits</button><button type="button"' + (spFiltro.categoria === 'vino' ? ' class="on"' : '') + ' data-sp-filtro="categoria:vino">Wine</button><button type="button"' + (spFiltro.categoria === 'distillato' ? ' class="on"' : '') + ' data-sp-filtro="categoria:distillato">Spirits</button></div>' +
+      (spAperto() ? '<button type="button" class="btn sm pri" data-sp-pubblica="">Put a bottle up</button>' : '') + '</div>';
+    var corpo;
+    if (!tutti.length) {
+      corpo = '<div class="ccard"><h4>The board is empty, for now.</h4><p>Only the bottles a member decides to share appear here: no inventories, no cellar values. Open one of your bottles and choose <strong>Put on the board</strong>, or start from here.</p>' +
+        (spAperto() ? '<div><button type="button" class="btn pri" data-sp-pubblica="">Put a bottle up</button></div>' : '') + '</div>';
+    } else if (!l.length) {
+      corpo = '<p class="disc">No bottle matches these filters.</p>';
+    } else {
+      corpo = '<div class="sp-grid">' + l.map(function (a) { return cardAnnuncio(a); }).join('') + '</div>';
+    }
+    return '<section class="blk">' + filtri + corpo + '</section>';
+  }
+  function cardAnnuncio(a) {
+    var pend = a.mia ? null : pendenteSu(a.id), aperto = spInteresse === a.id;
+    var chi = a.mia ? 'Your bottle' : escHtml(a.membro_nome || 'Member') + (a.membro_paese ? ' · ' + escHtml(a.membro_paese) : '');
+    var azione;
+    if (a.mia) azione = '<button type="button" class="lnk" data-sp-tab="proposte">manage it under My proposals</button>';
+    else if (pend) azione = '<span class="sp-when">' + (pend.stato === 'accettato' ? 'Contact details available' : 'Proposal sent') + '</span>';
+    else if (!spAperto()) azione = '';
+    else if (!aperto) azione = '<button type="button" class="btn sm pri" data-sp-interessa="' + a.id + '">I’m interested</button>';
+    else azione = '';
+    return '<div class="ccard sp-card">' + spFoto(a) +
+      '<div class="sp-top"><span><span class="clubtag' + (a.tipo === 'vendo' ? ' vend' : '') + '">' + SP_TIPO[a.tipo] + '</span> <span class="clubtag">' + SP_CAT[a.categoria] + '</span></span><span class="sp-when">' + giorniFa(a.pubblicato_il) + '</span></div>' +
+      '<h4>' + spNomeAnnuncio(a) + '</h4><p class="sp-sub">' + spSotto(a) + '</p>' +
+      spPrezzoRiga(a) +
+      '<dl class="sp-dl"><dt>Lotto</dt><dd>' + spLotto(a) + '</dd>' +
+      (a.condizioni ? '<dt>Condizioni</dt><dd>' + escHtml(a.condizioni) + '</dd>' : '') +
+      (a.provenienza ? '<dt>Provenance</dt><dd>' + escHtml(a.provenienza) + '</dd>' : '') +
+      '<dt>Located in</dt><dd>' + escHtml(a.paese) + ' · delivery to be agreed between you</dd></dl>' +
+      '<div class="sp-chi"><span>' + chi + '</span>' + azione + '</div>' +
+      (aperto ? formInteresse(a) : '') + '</div>';
+  }
+  function formInteresse(a) {
+    return '<div class="sp-form">' +
+      (a.tipo === 'vendo' ? '<label><span class="lbl">Your price for the lot (€) · leave empty to accept ' + fmtE(a.prezzo_totale) + '</span><input type="number" min="1" step="1" id="sp-int-prezzo" placeholder="' + escHtml(String(Math.round(a.prezzo_totale || 0))) + '"></label>' : '<p class="hint">Swap: the other member seeks ' + (a.cerco ? '<strong>' + escHtml(a.cerco) + '</strong>' : 'proposte') + '. Scrivi cosa offri.</p>') +
+      '<label><span class="lbl">A couple of lines, if you wish</span><textarea id="sp-int-msg" rows="2" maxlength="400" placeholder="' + (a.tipo === 'scambio' ? 'What you offer in exchange' : 'Optional') + '"></textarea></label>' +
+      recapitiCampi('sp-int') +
+      '<p class="hint">A proposal is not a contract: if the other member accepts, you exchange the contact details you chose and decide the rest yourselves.</p>' +
+      '<div class="row" style="margin-top:8px"><button type="button" class="btn sm gho" data-sp-annulla>Cancel</button><button type="button" class="btn sm pri" data-sp-invia-interesse="' + a.id + '">Send the proposal</button></div></div>';
+  }
+
+  /* ---------------------------------------------------- le mie proposte */
+  function tabProposte() {
+    var P = SP.proposte, miei = mieiAnnunci();
+    var mieHtml = miei.length ? '<div class="sp-grid">' + miei.map(cardAnnuncioMio).join('') + '</div>' :
+      '<p class="disc">You have no bottles on the board. Open a bottle and choose <strong>Put on the board</strong>.</p>';
+    var lista = spSub === 'ricevute' ? (P.ricevute || []) : (P.inviate || []);
+    var vuoto = spSub === 'ricevute' ? 'No proposals received. They arrive here when a member is interested in one of your bottles on the board.' : 'No proposals sent. From the Board, on a bottle you like, press <strong>I’m interested</strong>.';
+    return '<section class="blk"><header class="blkh"><h3>Your bottles on the board</h3><p>At most ' + ((SP.cfg && SP.cfg.max_annunci) || 5) + ' at a time, one listing per bottle, ' + ((SP.cfg && SP.cfg.scadenza_giorni) || 60) + ' giorni poi si rinnova a mano.</p></header>' + mieHtml + '</section>' +
+      '<section class="blk"><header class="blkh"><h3>Proposals</h3><p>One cycle only: proposal, possible counter-offer, answer. Accepting means becoming reachable, not closing a deal.</p></header>' +
+      '<div class="seg" style="margin-bottom:14px"><button type="button"' + (spSub === 'ricevute' ? ' class="on"' : '') + ' data-sp-sub="ricevute">Ricevute</button><button type="button"' + (spSub === 'inviate' ? ' class="on"' : '') + ' data-sp-sub="inviate">Inviate</button></div>' +
+      (lista.length ? '<div class="sp-lista">' + lista.map(cardProposta).join('') + '</div>' : '<p class="disc">' + vuoto + '</p>') + '</section>';
+  }
+  function cardAnnuncioMio(a) {
+    var g = giorniA(a.scade_il), stato = SP_STATO_ANN[a.stato] || a.stato;
+    if (a.stato === 'attivo' && g != null) stato += g <= 0 ? ' · expires today' : ' · expires in ' + g + (g === 1 ? ' giorno' : ' giorni');
+    var az = '';
+    if (a.stato === 'attivo' && spAperto()) az += '<button type="button" class="btn sm" data-sp-modifica="' + a.id + '">Modifica</button>';
+    if ((a.stato === 'scaduto' || (a.stato === 'attivo' && g != null && g <= 14)) && spAperto()) az += '<button type="button" class="btn sm pri" data-sp-rinnova="' + a.id + '">Rinnova</button>';
+    if (a.stato === 'in_pausa' && spAperto()) az += '<button type="button" class="btn sm pri" data-sp-riapri="' + a.id + '">Put back on the board</button>';
+    if (a.stato === 'attivo' || a.stato === 'scaduto' || a.stato === 'in_pausa') az += '<button type="button" class="btn sm gho" data-sp-ritira="' + a.id + '">Ritira</button>';
+    if (a.stato === 'in_trattativa') az += '<span class="sp-when">set the outcome from the accepted proposal</span>';
+    if (a.stato === 'in_pausa') stato = 'Paused · the negotiation did not conclude: put it back on the board or withdraw it';
+    return '<div class="ccard sp-card">' + spFoto(a) +
+      '<div class="sp-top"><span><span class="clubtag' + (a.tipo === 'vendo' ? ' vend' : '') + '">' + SP_TIPO[a.tipo] + '</span> <span class="clubtag">' + SP_CAT[a.categoria] + '</span></span><span class="sp-when">' + escHtml(stato) + '</span></div>' +
+      '<h4>' + spNomeAnnuncio(a) + '</h4><p class="sp-sub">' + spSotto(a) + '</p>' + spPrezzoRiga(a) +
+      '<div class="sp-chi"><span>' + spLotto(a) + '</span><span class="grp">' + az + '</span></div></div>';
+  }
+  function prossimaAzione(i) {
+    var mio = i.sono_proprietario, s = i.stato, A = i.annuncio || {}, apertoForm = spAzione && spAzione.id === i.id ? spAzione.tipo : null;
+    function b(t, cls, et) { return '<button type="button" class="btn sm ' + cls + '" data-sp-azione="' + t + ':' + i.id + '">' + et + '</button>'; }
+    var h = '';
+    var contro = A.tipo === 'vendo' ? fmtE(i.controprezzo) + ' for the lot' : '«' + escHtml(i.controtesto || '') + '»';
+    if (s === 'inviato') {
+      h = mio ? (spAperto() ? '<p class="sp-next">Your move.</p><div class="grp">' + b('accetta', 'pri', 'Accept') + b('contro', '', 'Counter-offer') + b('declina', 'gho', 'Decline') + '</div>' : '<p class="sp-next">Paused: no new acceptances until the Speakeasy reopens.</p>')
+              : '<p class="sp-next">Waiting for a reply from ' + escHtml(i.controparte_nome || 'a member') + '.</p><div class="grp">' + b('ritira', 'gho', 'Withdraw') + '</div>';
+    } else if (s === 'controproposto') {
+      h = mio ? '<p class="sp-next">You countered with ' + contro + '. In attesa della risposta di ' + escHtml(i.controparte_nome || '') + '.</p>'
+              : '<p class="sp-next">Your move: ' + escHtml(i.controparte_nome || '') + ' propone ' + contro + '.</p>' + (spAperto() ? '<div class="grp">' + b('accetta', 'pri', 'Accept') + b('rifiuta', 'gho', 'Refuse') + '</div>' : '');
+    } else if (s === 'da_riconfermare') {
+      h = mio ? '<p class="sp-next">The previous negotiation did not conclude: ' + escHtml(i.controparte_nome || '') + ' must confirm whether they are still interested.</p>'
+              : '<p class="sp-next">The bottle is available again. Still interested?</p>' + (spAperto() ? '<div class="grp">' + b('riconferma', 'pri', 'Yes, I confirm') + b('ritira', 'gho', 'No, I pass') + '</div>' : '');
+    } else if (s === 'superato') {
+      h = mio ? '<p class="sp-next">You changed the terms: the other member has to propose again.</p>'
+              : '<p class="sp-next">The terms have changed. If you are still interested, propose again from the Board.</p>';
+    } else if (s === 'in_attesa') {
+      h = '<p class="sp-next">Another proposal is in negotiation. If it does not conclude, ' + (mio ? 'you will be able to take this one up.' : 'you will be asked whether you are still interested.') + '</p>' + (!mio ? '<div class="grp">' + b('ritira', 'gho', 'Withdraw') + '</div>' : '');
+    } else if (s === 'accettato') {
+      h = boxContatti(i) + '<p class="sp-next">Once you have decided, say how it went. It only frees the bottle or closes it, nothing more.</p><div class="grp">' +
+          b('esito:' + (A.tipo === 'vendo' ? 'venduta' : 'scambiata'), 'pri', A.tipo === 'vendo' ? 'Sold' : 'Swapped') + b('esito:non_conclusa', 'gho', 'Not concluded') + '</div>';
+    } else if (s === 'chiuso') {
+      h = (i.accettato_il ? boxContatti(i) : '') +
+        '<p class="sp-next">Esito: <strong>' + (i.esito ? SP_ESITO[i.esito.esito] : '—') + '</strong>' + (i.esito && i.esito.nota ? ' · ' + escHtml(i.esito.nota) : '') +
+        (i.esito && i.esito.esito === 'non_conclusa' ? (mio ? ' · the bottle is paused: put it back on the board or withdraw it from “Your bottles on the board”.' : ' · nothing happens automatically.') : '') + '</p>' + boxUscita(i);
+    }
+    if (apertoForm) h += formAzione(apertoForm, i);
+    return h;
+  }
+  function boxContatti(i) {
+    var c = SP.contatti[i.id];
+    if (!c) return '<div class="sp-contatti"><b>Contact details available</b><p class="hint">' + escHtml(i.controparte_nome || '') + ' ha accettato: potete parlarvi direttamente.</p><button type="button" class="btn sm" data-sp-contatti="' + i.id + '">Show contact details</button></div>';
+    return '<div class="sp-contatti"><b>Contact details available</b><dl class="sp-dl">' +
+      '<dt>Name</dt><dd>' + escHtml(c.nome || '') + (c.paese ? ' · ' + escHtml(c.paese) : '') + (c.citta ? ' · ' + escHtml(c.citta) : '') + '</dd>' +
+      (c.email ? '<dt>Email</dt><dd><a href="mailto:' + escHtml(c.email) + '">' + escHtml(c.email) + '</a></dd>' : '') +
+      (c.telefono ? '<dt>Telefono</dt><dd>' + escHtml(c.telefono) + '</dd>' : '') +
+      (c.altro ? '<dt>Other</dt><dd>' + escHtml(c.altro) + '</dd>' : '') +
+      '</dl><p class="hint">Contact details chosen by the other member. They stay here for as long as the club keeps them.</p></div>';
+  }
+  function boxUscita(i) {
+    var A = i.annuncio || {}, mio = i.sono_proprietario;
+    /* vendita: scarica solo chi vende; scambio: ciascuno la propria bottiglia. Chi compra non scarica nulla. */
+    var deve = mio || A.tipo === 'scambio';
+    if (!deve || !i.esito || i.esito.esito === 'non_conclusa') return '';
+    if (i.uscita_confermata_il) return '<p class="sp-next">Removal from the cellar confirmed on ' + escHtml(new Date(i.uscita_confermata_il).toLocaleDateString('en-GB')) + '.</p>';
+    if (mio) return '<p class="sp-next">The bottle is still in your cellar' + (A.lotto_quantita > 1 ? ' (' + A.lotto_quantita + ' pieces in the lot)' : '') + '. Quando è davvero passata di mano, segnala l’uscita: una volta sola.</p><div class="grp"><button type="button" class="btn sm" data-sp-azione="uscita:' + i.id + '">Mark the bottle as gone</button></div>';
+    var mie = STATE.bottles.filter(function (b) { return inCantina(b) && !inCoda(b); });
+    return '<p class="sp-next">Did you give one of your bottles in exchange? Record its removal from your cellar, once only.</p><div class="sp-form"><div class="posgrid"><label><span class="lbl">The bottle you gave</span><select id="sp-uscita-bott-' + i.id + '"><option value="">Scegli</option>' + mie.map(function (b) { return '<option value="' + b.id + '">' + escHtml(b.nome || 'Unnamed') + (b.annata ? ' ' + escHtml(b.annata) : '') + (b.quantita > 1 ? ' · ' + b.quantita + ' pezzi' : '') + '</option>'; }).join('') + '</select></label><label><span class="lbl">How many pieces</span><input type="number" min="1" step="1" value="1" id="sp-uscita-qta-' + i.id + '"></label></div><div class="grp" style="margin-top:8px"><button type="button" class="btn sm" data-sp-azione="uscita:' + i.id + '">Mark the bottle as gone</button></div></div>';
+  }
+  function formAzione(tipo, i) {
+    var A = i.annuncio || {}, t = tipo.split(':')[0];
+    var testa = { accetta: 'You accept: you exchange the contact details you chose. No commitment beyond that.', contro: 'One counter-offer only: then the other member decides.', riconferma: 'You confirm your interest on the current terms.', esito: 'How did it go? It stays between you; the Desk sees it only if it did not conclude.', segnala: 'Report to the Desk. Only the Desk reads it.' }[t] || '';
+    var h = '<div class="sp-form"><p class="hint">' + testa + '</p>';
+    if (t === 'contro') h += A.tipo === 'vendo'
+      ? '<label><span class="lbl">Your price for the lot (€)</span><input type="number" min="1" step="1" id="sp-az-prezzo" placeholder="' + escHtml(String(Math.round(A.prezzo_totale || 0))) + '"></label>'
+      : '<label><span class="lbl">What you propose in exchange, concretely</span><textarea id="sp-az-testo" rows="2" maxlength="400" placeholder="e.g. two bottles instead of one, or another label"></textarea></label>';
+    if (t === 'accetta' || t === 'contro' || t === 'riconferma') h += recapitiCampi('sp-az');
+    if (t === 'esito') h += '<label><span class="lbl">A note, if you wish</span><input type="text" id="sp-az-nota" maxlength="400" placeholder="optional"></label>';
+    if (t === 'segnala') h += '<label><span class="lbl">What is wrong</span><textarea id="sp-az-motivo" rows="3" maxlength="1000"></textarea></label>';
+    h += '<div class="row" style="margin-top:8px"><button type="button" class="btn sm gho" data-sp-annulla>Cancel</button><button type="button" class="btn sm pri" data-sp-conferma="' + tipo + ':' + i.id + '">Conferma</button></div></div>';
+    return h;
+  }
+  function cardProposta(i) {
+    var A = i.annuncio || {}, mio = i.sono_proprietario;
+    var chi = mio ? 'From ' + escHtml(i.controparte_nome || 'a member') : 'A ' + escHtml(i.controparte_nome || 'a member');
+    if (i.controparte_paese) chi += ' · ' + escHtml(i.controparte_paese);
+    var termini = A.tipo === 'vendo'
+      ? '<span>' + (i.prezzo_proposto != null ? 'Proposto ' + fmtE(i.prezzo_proposto) + ' against ' + fmtE(A.prezzo_totale) : 'At the listed price · ' + fmtE(A.prezzo_totale)) + '</span>'
+      : '<span>Scambio' + (A.cerco ? ' · seeks ' + escHtml(A.cerco) : '') + '</span>';
+    return '<div class="ccard sp-prop">' +
+      '<div class="sp-top"><span><span class="clubtag' + (A.tipo === 'vendo' ? ' vend' : '') + '">' + (SP_TIPO[A.tipo] || '') + '</span> <span class="sp-stato">' + (SP_STATO_INT[i.stato] || i.stato) + '</span></span><span class="sp-when">' + giorniFa(i.creato_il) + '</span></div>' +
+      '<h4>' + spNomeAnnuncio(A) + '</h4><p class="sp-sub">' + chi + ' · ' + termini + '</p>' +
+      (i.messaggio ? '<p class="sp-msg">' + escHtml(i.messaggio) + '</p>' : '') +
+      prossimaAzione(i) +
+      '<p class="sp-foot"><button type="button" class="lnk" data-sp-azione="segnala:' + i.id + '">Report to the Desk</button></p></div>';
+  }
+
+  /* -------------------------------------------------------------- membri */
+  function tabMembri() {
+    if (spMembroId) return profiloMembro();
+    var righe = (SP.membri || []).map(function (m) {
+      return '<tr class="r" data-sp-membro="' + escHtml(m.codice) + '" tabindex="0"><td><span class="tnm">' + escHtml(m.nome || '—') + '</span>' + (m.sei_tu ? ' <span class="sp-when">tu</span>' : '') + '</td><td>' + escHtml(m.paese || '—') + (m.citta ? '<br><span class="sp-when">' + escHtml(m.citta) + '</span>' : '') + '</td><td>' + (m.lingua === 'en' ? 'English' : 'Italiano') + '</td><td>' + (m.membro_dal ? fmtD(String(m.membro_dal).slice(0, 10)) : '—') + '</td></tr>';
     }).join('');
-    return capitolo(z, intro) +
-      (PROFILO.fondatore ? '<p class="disc">You are a founding member: you see every listing 48 hours before the others.</p>' : '') +
-      '<div class="speak">' +
-      '<section class="blk"><header class="blkh"><h3>On the board · ' + altre.length + '</h3><p>The other members’ bottles.</p></header>' + bacheca + '</section>' +
-      '<section class="blk"><header class="blkh"><h3>Your bottles on the board · ' + mie.length + '</h3><p>All members see them; whoever is interested writes to you by email.</p></header>' + mieHtml + '</section>' +
-      '<section class="blk"><header class="blkh"><h3>I soci · ' + (SOCI || []).length + '</h3><p>Who is in, since when, with how many bottles catalogued.</p></header><div class="tw"><table><thead><tr><th>Member</th><th>City</th><th>Since</th><th class="r">Bottles</th></tr></thead><tbody>' + (soci || '<tr><td colspan="4">No one yet.</td></tr>') + '</tbody></table></div>' +
-      '<div class="sp-citta"><label class="lbl" for="sp-citta">Your city</label><input type="text" id="sp-citta" value="' + escHtml(PROFILO.citta || '') + '" placeholder="e.g. Milan"><button type="button" class="btn sm" id="sp-citta-salva">Save</button></div></section>' +
-      '<section class="blk"><header class="blkh"><h3>Salons and gatherings</h3><p>The Caveau salons in your city and the next tables are announced by the Desk, here and by email.</p></header>' +
-      '<div class="ccard"><h4>Write to the Desk</h4><p>A question, a proposal, a gathering to organise: a person replies.</p><textarea id="desk-testo" placeholder="Write here"></textarea><div class="row" style="margin-top:10px"><span></span><button type="button" class="btn sm pri" id="desk-invia">Send to the Desk</button></div></div></section>' +
-      '<p class="disc"><button type="button" class="lnk" id="sp-ricarica">Aggiorna</button></p>' +
-      '</div>';
+    return '<section class="blk"><header class="blkh"><h3>The members</h3><p>Who belongs to the club: name, country and since when. Open a name to see their interests and the bottles they have chosen to share.</p></header>' +
+      '<div class="tw"><table><thead><tr><th>Member</th><th>Country</th><th>Language</th><th>Member since</th></tr></thead><tbody>' + (righe || '<tr><td colspan="4">No one yet.</td></tr>') + '</tbody></table></div></section>';
+  }
+  function profiloMembro() {
+    var m = SP.membro;
+    if (!m || m.codice !== spMembroId) {
+      if (window.CELL && !SP.caricando) { SP.caricando = true; CELL.spMembro(spMembroId).then(function (r) { SP.membro = r; SP.caricando = false; render(); spFirmaFoto(); }).catch(function (e) { SP.caricando = false; spMembroId = null; toast((e && e.message) || 'Profile unavailable'); render(); }); }
+      return '<section class="blk"><p class="disc">Opening the profile…</p></section>';
+    }
+    var ann = (m.annunci || []).map(function (a) { return cardAnnuncio(a); }).join('');
+    return '<section class="blk"><p><button type="button" class="lnk" data-sp-indietro>← All members</button></p>' +
+      '<div class="ccard sp-profilo"><h4>' + escHtml(m.nome || '') + '</h4><p class="sp-sub">' + [m.paese, m.citta, m.lingua === 'en' ? 'English' : 'Italiano', m.membro_dal ? 'member since ' + fmtD(String(m.membro_dal).slice(0, 10)) : ''].filter(Boolean).map(escHtml).join(' · ') + '</p>' +
+      ((m.interessi || []).length ? '<p><span class="lbl">Interessi</span> ' + m.interessi.map(function (x) { return '<span class="clubtag">' + escHtml(x) + '</span>'; }).join(' ') + '</p>' : '') +
+      (m.descrizione ? '<p>' + escHtml(m.descrizione) + '</p>' : '') + '</div>' +
+      '<header class="blkh" style="margin-top:18px"><h3>On the board</h3></header>' + (ann ? '<div class="sp-grid">' + ann + '</div>' : '<p class="disc">No bottle shared at the moment.</p>') + '</section>';
+  }
+
+  /* ---------------------------------------------------- il mio profilo */
+  function profiloSheet() {
+    var p = PROFILO;
+    return '<div class="ov" data-ov><div class="sheet">' +
+      head('My profile', spDopoProfilo ? 'Before listing or proposing, your name, country and language are needed: that is how the other members know who they are talking to.' : 'What the other members see of you. No numbers, no rankings.') +
+      '<div class="shb"><div class="posgrid">' +
+      '<label><span class="lbl">Full name</span><input type="text" id="pf-nome" value="' + escHtml(p.nome || '') + '" maxlength="80"></label>' +
+      '<label><span class="lbl">Paese</span><input type="text" id="pf-paese" list="pf-paesi" value="' + escHtml(p.paese || '') + '" maxlength="60"><datalist id="pf-paesi">' + SP_PAESI.map(function (x) { return '<option value="' + x + '">'; }).join('') + '</datalist></label>' +
+      '<label><span class="lbl">City · optional</span><input type="text" id="pf-citta" value="' + escHtml(p.citta || '') + '" maxlength="60"></label>' +
+      '<label><span class="lbl">Lingua</span><select id="pf-lingua"><option value="it"' + (p.lingua !== 'en' ? ' selected' : '') + '>Italiano</option><option value="en"' + (p.lingua === 'en' ? ' selected' : '') + '>English</option></select></label>' +
+      '</div>' +
+      '<label class="chk" style="margin-top:10px"><input type="checkbox" id="pf-citta-vis"' + (p.citta_visibile ? ' checked' : '') + '> Show my city to other members (otherwise they only see the country)</label>' +
+      '<label style="display:block;margin-top:12px"><span class="lbl">Interests · comma-separated</span><input type="text" id="pf-interessi" value="' + escHtml((p.interessi || []).join(', ')) + '" placeholder="es. Barolo, whisky torbato, Champagne"></label>' +
+      '<label style="display:block;margin-top:12px"><span class="lbl">A couple of lines about you · optional</span><textarea id="pf-desc" rows="2" maxlength="280">' + escHtml(p.descrizione || '') + '</textarea></label>' +
+      '<p class="hint">Your profile shows only these lines and the bottles you have on the board. Your cellar, its values and your contact details stay private.</p></div>' +
+      '<div class="shf"><button type="button" class="btn gho" data-shutsheet>Cancel</button><button type="button" class="btn pri" id="pf-salva">Save profile</button></div></div></div>';
+  }
+  function salvaProfilo() {
+    function g(id) { var e = document.getElementById(id); return e ? e.value.trim() : ''; }
+    var nome = g('pf-nome'), paese = g('pf-paese'), lingua = g('pf-lingua') || 'it';
+    if (!nome) { toast('Your name is needed'); return; }
+    if (!paese) { toast('Your country is needed'); return; }
+    var interessi = g('pf-interessi').split(',').map(function (s) { return s.trim(); }).filter(Boolean).slice(0, 12);
+    var btn = document.getElementById('pf-salva'); if (btn) btn.disabled = true;
+    var vis = !!((document.getElementById('pf-citta-vis') || {}).checked);
+    CELL.salvaProfilo({ nome: nome, paese: paese, citta: g('pf-citta'), citta_visibile: vis, lingua: lingua, interessi: interessi, descrizione: g('pf-desc') }).then(function (p) {
+      p = p || {};
+      PROFILO.nome = p.nome || nome; PROFILO.paese = p.paese || paese; PROFILO.citta = p.citta || ''; PROFILO.citta_visibile = !!p.citta_visibile; PROFILO.lingua = p.lingua || lingua; PROFILO.interessi = p.interessi || interessi; PROFILO.descrizione = p.descrizione || ''; PROFILO.completo = !!p.completo;
+      profiloOpen = false; var fn = spDopoProfilo; spDopoProfilo = null; spReset(); render(); toast('Profile saved');
+      if (fn) fn();
+    }).catch(function (e) { if (btn) btn.disabled = false; toast((e && e.message) || 'Not saved'); });
+  }
+
+  /* -------------------------------------------- pubblicare una bottiglia */
+  function bottigliePubblicabili() {
+    return STATE.bottles.filter(function (b) { return inCantina(b) && !inCoda(b) && !b.esempio && !annuncioDiBottiglia(b.id); });
+  }
+  function categoriaDi(b) { return (b && (b.tipologia === 'Vino' || b.tipologia === 'Spumante')) ? 'vino' : 'distillato'; }
+  function sottotipoDi(b) {
+    if (!b) return '';
+    if (b.tipologia === 'Spumante') return 'Spumante';
+    if (b.tipologia === 'Vino') return b.colore === 'Rosso' ? 'Rosso' : b.colore === 'Bianco' ? 'Bianco' : b.colore === 'Rosé' ? 'Rosé' : '';
+    return SP_SOTTO.distillato.indexOf(b.tipologia) >= 0 ? b.tipologia : (b.tipologia === 'Liquore' || b.tipologia === 'Altro' ? 'Other spirit' : '');
+  }
+  function apriPubblica(bottigliaId) {
+    var b = bottigliaId ? STATE.bottles.find(function (x) { return x.id === bottigliaId; }) : null;
+    spForm = { bottiglia_id: b ? b.id : '', tipo: 'vendo', categoria: categoriaDi(b), sottotipo: sottotipoDi(b), nome: b ? b.nome : '', produttore: b ? b.produttore : '', annata: b ? b.annata : '', formato: b ? b.formato : '', lotto_quantita: b ? (b.quantita || 1) : 1, lotto_descrizione: '', prezzo_totale: '', cerco: '', condizioni: '', provenienza: b ? b.provenienza : '', paese: PROFILO.paese || '', foto: null };
+    editingId = null; render();
+  }
+  function apriModifica(a) {
+    spForm = { id: a.id, bottiglia_id: a.bottiglia_id || '', tipo: a.tipo, categoria: a.categoria, sottotipo: a.sottotipo || '', nome: a.nome, produttore: a.produttore || '', annata: a.annata || '', formato: a.formato || '', lotto_quantita: a.lotto_quantita || 1, lotto_descrizione: a.lotto_descrizione || '', prezzo_totale: a.prezzo_totale != null ? a.prezzo_totale : '', cerco: a.cerco || '', condizioni: a.condizioni || '', provenienza: a.provenienza || '', paese: a.paese || PROFILO.paese || '', foto_percorso: a.foto_percorso || null, foto: null };
+    render();
+  }
+  function formAnnuncioSheet() {
+    var f = spForm, mod = !!f.id;
+    var scelta = mod ? '' : '<label class="full"><span class="lbl">Which bottle</span><select id="an-bott">' + '<option value="">Choose from your cellar</option>' + bottigliePubblicabili().map(function (b) { return '<option value="' + b.id + '"' + (b.id === f.bottiglia_id ? ' selected' : '') + '>' + escHtml(b.nome || 'Unnamed') + (b.annata ? ' ' + escHtml(b.annata) : '') + (b.quantita > 1 ? ' · ' + b.quantita + ' bott.' : '') + '</option>'; }).join('') + '</select></label>';
+    var sotto = SP_SOTTO[f.categoria] || [];
+    return '<div class="ov" data-ov><div class="sheet wide">' +
+      head(mod ? 'Edit the listing' : 'Put on the board', mod ? 'If you change the terms, proposals already received must be made again: that is only fair.' : 'Only what you decide to show. The rest of the cellar is not visible.') +
+      '<div class="shb">' + (mod ? '' : '<div class="seg" style="margin-bottom:14px"><button type="button"' + (f.tipo === 'vendo' ? ' class="on"' : '') + ' data-sp-f="tipo:vendo">Vendo</button><button type="button"' + (f.tipo === 'scambio' ? ' class="on"' : '') + ' data-sp-f="tipo:scambio">Scambio</button></div>') +
+      '<div class="posgrid">' + scelta +
+      '<label><span class="lbl">Wine or spirit</span><select id="an-cat" data-sp-f-cat><option value="vino"' + (f.categoria === 'vino' ? ' selected' : '') + '>Wine</option><option value="distillato"' + (f.categoria === 'distillato' ? ' selected' : '') + '>Distillato</option></select></label>' +
+      '<label><span class="lbl">Type</span><select id="an-sotto"><option value="">—</option>' + sotto.map(function (s) { return '<option value="' + s + '"' + (s === f.sottotipo ? ' selected' : '') + '>' + s + '</option>'; }).join('') + '</select></label>' +
+      '<label><span class="lbl">Label</span><input type="text" id="an-nome" value="' + escHtml(f.nome) + '" maxlength="120"></label>' +
+      '<label><span class="lbl">Producer</span><input type="text" id="an-prod" value="' + escHtml(f.produttore) + '" maxlength="120"></label>' +
+      '<label><span class="lbl">Vintage</span><input type="text" id="an-annata" value="' + escHtml(f.annata) + '" maxlength="12" placeholder="o NAS"></label>' +
+      '<label><span class="lbl">Format</span><input type="text" id="an-fmt" value="' + escHtml(f.formato) + '" maxlength="24" placeholder="es. 75 cl"></label>' +
+      '<label><span class="lbl">How many bottles in the lot</span><input type="number" min="1" step="1" id="an-qta" value="' + escHtml(String(f.lotto_quantita)) + '"></label>' +
+      '<label><span class="lbl">Lotto · nota</span><input type="text" id="an-lotto" value="' + escHtml(f.lotto_descrizione) + '" maxlength="200" placeholder="es. cassa originale, lotto indivisibile"></label>' +
+      (f.tipo === 'vendo' ? '<label><span class="lbl">Total price for the lot (€)</span><input type="number" min="1" step="1" id="an-prezzo" value="' + escHtml(String(f.prezzo_totale)) + '"></label>' : '<label class="full"><span class="lbl">What you seek in exchange</span><input type="text" id="an-cerco" value="' + escHtml(f.cerco) + '" maxlength="200" placeholder="leave empty if you are open to offers"></label>') +
+      '<label><span class="lbl">Declared condition</span><input type="text" id="an-cond" value="' + escHtml(f.condizioni) + '" maxlength="200" placeholder="e.g. perfect fill, scuffed label"></label>' +
+      '<label><span class="lbl">Declared provenance</span><input type="text" id="an-prov" value="' + escHtml(f.provenienza) + '" maxlength="200" placeholder="e.g. bought at the winery in 2015"></label>' +
+      '<label><span class="lbl">Located in · country</span><input type="text" id="an-paese" list="an-paesi" value="' + escHtml(f.paese) + '" maxlength="60"><datalist id="an-paesi">' + SP_PAESI.map(function (x) { return '<option value="' + x + '">'; }).join('') + '</datalist></label>' +
+      '<label><span class="lbl">Photo · optional</span><input type="file" accept="image/*" id="an-foto"></label>' +
+      '</div>' +
+      (f.foto_percorso ? '<p class="hint">There is already a photo: upload a new one only if you want to replace it.</p>' : '') +
+      '<p class="hint">The photo is resized and stripped of hidden data before it leaves your device. Price in euro, total for the lot: no per-bottle prices. Delivery is for you to agree.</p></div>' +
+      '<div class="shf"><button type="button" class="btn gho" data-shutsheet>Cancel</button><button type="button" class="btn pri" id="an-salva">' + (mod ? 'Save changes' : 'Publish on the board') + '</button></div></div></div>';
+  }
+  function fotoDerivata(file) {
+    return new Promise(function (ok, ko) {
+      var img = new Image(), url = URL.createObjectURL(file);
+      img.onload = function () {
+        var M = 1200, w = img.naturalWidth, h = img.naturalHeight, s = Math.min(1, M / Math.max(w, h));
+        var c = document.createElement('canvas'); c.width = Math.round(w * s); c.height = Math.round(h * s);
+        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+        URL.revokeObjectURL(url);
+        c.toBlob(function (b) { b ? ok(b) : ko(new Error('Photo could not be read')); }, 'image/jpeg', 0.82);
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); ko(new Error('Photo could not be read')); };
+      img.src = url;
+    });
+  }
+  function salvaAnnuncio() {
+    function g(id) { var e = document.getElementById(id); return e ? e.value.trim() : ''; }
+    var f = spForm, p = {
+      bottiglia_id: f.id ? undefined : (g('an-bott') || null), tipo: f.tipo, categoria: g('an-cat') || f.categoria, sottotipo: g('an-sotto'),
+      nome: g('an-nome'), produttore: g('an-prod'), annata: g('an-annata'), formato: g('an-fmt'),
+      lotto_quantita: Math.max(1, Math.round(Number(g('an-qta')) || 1)), lotto_descrizione: g('an-lotto'),
+      prezzo_totale: f.tipo === 'vendo' ? num(g('an-prezzo')) : null, cerco: f.tipo === 'scambio' ? g('an-cerco') : null,
+      condizioni: g('an-cond'), provenienza: g('an-prov'), paese: g('an-paese'), foto_percorso: f.foto_percorso || null
+    };
+    if (!f.id && !p.bottiglia_id) { toast('Choose the bottle from your cellar'); return; }
+    if (!p.nome) { toast('The label is needed'); return; }
+    if (!p.paese) { toast('The country where it is located is needed'); return; }
+    if (f.tipo === 'vendo' && !(p.prezzo_totale > 0)) { toast('The total price for the lot is needed'); return; }
+    var fi = document.getElementById('an-foto'), file = fi && fi.files && fi.files[0];
+    var btn = document.getElementById('an-salva'); if (btn) { btn.disabled = true; btn.textContent = 'Salvo…'; }
+    var pronto = file ? fotoDerivata(file).then(function (blob) { return CELL.spFotoCarica(blob); }).then(function (path) { p.foto_percorso = path; }) : Promise.resolve();
+    pronto.then(function () { return f.id ? CELL.spModifica(f.id, p) : CELL.spPubblica(p); })
+      .then(function () { spForm = null; spReset(); spTab = 'proposte'; stanza = 'club'; render(); toast(f.id ? 'Listing updated' : 'On the board'); })
+      .catch(function (e) { if (btn) { btn.disabled = false; btn.textContent = f.id ? 'Save changes' : 'Publish on the board'; } toast((e && e.message) || 'Failed'); });
+  }
+
+  /* ------------------------------------------------ il Desk: solo questo */
+  function deskSpeakeasyHtml(S) {
+    S = S || { segnalazioni: [], esiti_negativi: [] };
+    var seg = (S.segnalazioni || []).map(function (s) {
+      var a = s.annuncio, i = s.interesse;
+      return '<tr><td>' + fmtDT(s.creata_il) + '</td><td>' + escHtml((s.segnalante || {}).nome || '') + '<br><span class="sp-when">' + escHtml((s.segnalante || {}).email || '') + '</span></td><td>' + (a ? escHtml(a.nome || '') + (a.annata ? ' ' + escHtml(a.annata) : '') + '<br><span class="sp-when">by ' + escHtml((a.proprietario || {}).nome || '') + (i ? ' · proposal by ' + escHtml((i.interessato || {}).nome || '') : '') + '</span>' : '—') + '</td><td style="white-space:pre-wrap;max-width:420px">' + escHtml(s.motivo || '') + (s.nota_desk ? '<br><span class="sp-when">nota: ' + escHtml(s.nota_desk) + '</span>' : '') + '</td><td>' + (s.stato === 'aperta' ? '<button type="button" class="btn sm" data-sp-seg-chiudi="' + s.id + '">Close</button>' : 'chiusa') + '</td></tr>';
+    }).join('');
+    return '<div class="tw"><table><thead><tr><th>When</th><th>Reported by</th><th>Listing</th><th>Reason</th><th></th></tr></thead><tbody>' + (seg || '<tr><td colspan="5">No reports.</td></tr>') + '</tbody></table></div>';
+  }
+
+  /* ------------------------------------------------------------- eventi */
+  function spEsegui(lavoro, dopo, avviso) {
+    if (spOccupato) return; spOccupato = true;
+    lavoro().then(function (r) { spOccupato = false; spAzione = null; spInteresse = null; spReset(); render(); if (dopo) dopo(r); if (avviso) toast(avviso); })
+      .catch(function (e) { spOccupato = false; render(); toast((e && e.message) || 'Failed'); });
   }
   function bindSpeakeasy(root, on) {
-    root.querySelectorAll('[data-contatta]').forEach(function (e) { e.addEventListener('click', function () { contattoId = e.getAttribute('data-contatta'); render(); var t = document.getElementById('sp-testo'); if (t) t.focus(); }); });
-    root.querySelectorAll('[data-contatta-annulla]').forEach(function (e) { e.addEventListener('click', function () { contattoId = null; render(); }); });
-    on('sp-invia', 'click', function (ev) {
-      var t = (document.getElementById('sp-testo') || {}).value || '', id = ev.currentTarget.getAttribute('data-bott');
-      if (!t.trim()) { toast('Write a couple of lines to the member first'); return; }
-      ev.currentTarget.disabled = true;
-      CELL.avvisa('speakeasy', t.trim(), '', id).then(function () { contattoId = null; render(); toast('Message sent to the member · the Desk is in copy'); })
-        .catch(function (e) { render(); toast((e && e.message) || 'Not sent, try again'); });
+    function all(sel, fn) { root.querySelectorAll(sel).forEach(function (e) { e.addEventListener('click', function (ev) { fn(e, ev); }); }); }
+    all('[data-sp-tab]', function (e) { spTab = e.getAttribute('data-sp-tab'); spInteresse = null; spAzione = null; spMembroId = null; stanza = 'club'; render(); });
+    all('[data-sp-sub]', function (e) { spSub = e.getAttribute('data-sp-sub'); spAzione = null; render(); });
+    all('[data-sp-filtro]', function (e) { var kv = e.getAttribute('data-sp-filtro').split(':'); spFiltro[kv[0]] = kv[1] || ''; render(); });
+    all('[data-sp-annulla]', function () { spInteresse = null; spAzione = null; render(); });
+    all('[data-sp-indietro]', function () { spMembroId = null; SP.membro = null; render(); });
+    root.querySelectorAll('[data-sp-membro]').forEach(function (e) {
+      function go() { spMembroId = e.getAttribute('data-sp-membro'); render(); }
+      e.addEventListener('click', go);
+      e.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); go(); } });
     });
-    on('sp-citta-salva', 'click', function () {
-      var v = ((document.getElementById('sp-citta') || {}).value || '').trim();
-      CELL.aggiornaCitta(v).then(function () { PROFILO.citta = v; SOCI = null; BACHECA = null; render(); toast('City saved'); }).catch(function (e) { toast((e && e.message) || 'Not saved'); });
+    all('[data-sp-pubblica]', function (e) { var id = e.getAttribute('data-sp-pubblica'); richiedeProfilo(function () { apriPubblica(id); }); });
+    all('[data-sp-modifica]', function (e) { var a = mieiAnnunci().filter(function (x) { return x.id === e.getAttribute('data-sp-modifica'); })[0]; if (a) apriModifica(a); });
+    all('[data-sp-riapri]', function (e) { spEsegui(function () { return CELL.spRiapri(e.getAttribute('data-sp-riapri')); }, null, 'Back on the board · those who were waiting will have to confirm their interest'); });
+    all('[data-sp-rinnova]', function (e) { spEsegui(function () { return CELL.spRinnova(e.getAttribute('data-sp-rinnova')); }, null, 'Renewed for another ' + ((SP.cfg && SP.cfg.scadenza_giorni) || 60) + ' giorni'); });
+    all('[data-sp-ritira]', function (e) { if (!confirm('Withdraw the bottle from the board? Pending proposals will lapse.')) return; spEsegui(function () { return CELL.spRitira(e.getAttribute('data-sp-ritira')); }, null, 'Withdrawn from the board'); });
+    all('[data-sp-interessa]', function (e) { var id = e.getAttribute('data-sp-interessa'); richiedeProfilo(function () { spInteresse = id; spAzione = null; render(); var t = document.getElementById('sp-int-msg'); if (t) t.focus(); }); });
+    all('[data-sp-invia-interesse]', function (e) {
+      var id = e.getAttribute('data-sp-invia-interesse'), a = (SP.bacheca || []).concat((SP.membro && SP.membro.annunci) || []).filter(function (x) { return x.id === id; })[0] || {};
+      var prezzo = a.tipo === 'vendo' ? num((document.getElementById('sp-int-prezzo') || {}).value) : null;
+      var msg = ((document.getElementById('sp-int-msg') || {}).value || '').trim(), r = leggiRecapiti('sp-int');
+      if (!r.email_ok && !r.telefono && !r.altro) { toast('Choose at least one contact detail'); return; }
+      e.disabled = true;
+      spEsegui(function () { return CELL.spInteressa(id, prezzo, msg, r); }, function (i) { CELL.avvisa('sp_interesse', '', '', i && i.id).catch(function () {}); }, 'Proposal sent');
     });
-    on('sp-ricarica', 'click', function () { BACHECA = null; SOCI = null; render(); });
+    all('[data-sp-contatti]', function (e) {
+      var id = e.getAttribute('data-sp-contatti'); e.disabled = true;
+      CELL.spContatti(id).then(function (c) { SP.contatti[id] = c || {}; render(); }).catch(function (x) { render(); toast((x && x.message) || 'Contact details unavailable'); });
+    });
+    all('[data-sp-azione]', function (e) {
+      var v = e.getAttribute('data-sp-azione'), parti = v.split(':'), id = parti[parti.length - 1], tipo = parti.slice(0, -1).join(':'), t = tipo.split(':')[0];
+      if (t === 'declina' || t === 'rifiuta' || t === 'ritira') {
+        spEsegui(function () { return CELL.spChiudiInteresse(id); }, null, { declina: 'Proposal declined', rifiuta: 'Counter-offer refused', ritira: 'Proposal withdrawn' }[t]);
+        return;
+      }
+      if (t === 'uscita') {
+        var sel = document.getElementById('sp-uscita-bott-' + id), bott = sel ? sel.value : null;
+        var qel = document.getElementById('sp-uscita-qta-' + id), qta = qel ? Math.max(1, Math.round(Number(qel.value) || 1)) : null;
+        if (sel && !bott) { toast('Choose the bottle you gave'); return; }
+        spEsegui(function () { return CELL.spUscita(id, bott || null, qta); }, function (r) {
+          var bid = r && r.bottiglia_id;
+          if (bid && !(r && r.gia_confermata)) {
+            commit(function (ns) { ns.bottles.forEach(function (b) { if (b.id !== bid) return; if (r.residuo > 0) { b.quantita = r.residuo; } else { b.stato = 'venduta'; b.venduta_il = b.venduta_il || today(); } }); }, false);
+          }
+        }, 'Removal from the cellar recorded');
+        return;
+      }
+      spAzione = { tipo: tipo, id: id }; render();
+    });
+    all('[data-sp-conferma]', function (e) {
+      var v = e.getAttribute('data-sp-conferma'), parti = v.split(':'), id = parti[parti.length - 1], t = parti[0], arg = parti.length > 2 ? parti[1] : '';
+      var r = leggiRecapiti('sp-az');
+      if ((t === 'accetta' || t === 'contro' || t === 'riconferma') && !r.email_ok && !r.telefono && !r.altro) { toast('Choose at least one contact detail'); return; }
+      e.disabled = true;
+      if (t === 'accetta') spEsegui(function () { return CELL.spAccetta(id, r); }, function () { CELL.avvisa('sp_contatti', '', '', id).catch(function () {}); }, 'Contact details available');
+      else if (t === 'contro') {
+        var pzEl = document.getElementById('sp-az-prezzo'), txEl = document.getElementById('sp-az-testo');
+        var pz = pzEl ? num(pzEl.value) : null, tx = txEl ? txEl.value.trim() : '';
+        if (pzEl && !(pz > 0)) { e.disabled = false; toast('The price is needed'); return; }
+        if (txEl && tx.length < 3) { e.disabled = false; toast('Write what you propose in exchange'); return; }
+        spEsegui(function () { return CELL.spControproponi(id, pz, tx, r); }, function () { CELL.avvisa('sp_controproposta', '', '', id).catch(function () {}); }, 'Counter-offer sent');
+      }
+      else if (t === 'riconferma') spEsegui(function () { return CELL.spRiconferma(id, r); }, function () { CELL.avvisa('sp_interesse', '', '', id).catch(function () {}); }, 'Interest confirmed');
+      else if (t === 'esito') spEsegui(function () { return CELL.spEsito(id, arg, ((document.getElementById('sp-az-nota') || {}).value || '').trim()); }, null, 'Outcome recorded');
+      else if (t === 'segnala') { var m = ((document.getElementById('sp-az-motivo') || {}).value || '').trim(); if (m.length < 3) { e.disabled = false; toast('Write what is wrong'); return; } spEsegui(function () { return CELL.spSegnala(null, id, m); }, function () { CELL.avvisa('sp_segnalazione', m, '', id).catch(function () {}); }, 'Report sent to the Desk'); }
+    });
+    root.querySelectorAll('[data-sp-f]').forEach(function (e) { e.addEventListener('click', function () { var kv = e.getAttribute('data-sp-f').split(':'); if (spForm) { spForm[kv[0]] = kv[1]; render(); } }); });
+    root.querySelectorAll('[data-sp-f-cat]').forEach(function (e) { e.addEventListener('change', function () { if (spForm) { spForm.categoria = e.value; spForm.sottotipo = ''; render(); } }); });
+    on('an-bott', 'change', function (ev) { var b = STATE.bottles.find(function (x) { return x.id === ev.target.value; }); if (b && spForm) { spForm.bottiglia_id = b.id; spForm.nome = b.nome; spForm.produttore = b.produttore; spForm.annata = b.annata; spForm.formato = b.formato; spForm.lotto_quantita = b.quantita || 1; spForm.provenienza = b.provenienza; spForm.categoria = categoriaDi(b); spForm.sottotipo = sottotipoDi(b); render(); } });
+    on('an-salva', 'click', salvaAnnuncio);
+    on('sp-profilo-apri', 'click', function () { profiloOpen = true; render(); });
+    on('pf-salva', 'click', salvaProfilo);
+    on('sp-ricarica', 'click', function () { spReset(); render(); });
+    on('sp-in-bacheca', 'click', function () { editingId = null; spTab = 'proposte'; stanza = 'club'; render(); });
+    /* il Desk: interruttori dello Speakeasy e chiusura delle segnalazioni */
+    all('[data-sp-cfg]', function (e) { CELL.deskSpConfigura(e.getAttribute('data-sp-cfg'), e.getAttribute('data-val')).then(function () { DESK = null; SP.cfg = null; spReset(); render(); toast('Setting saved'); }).catch(function (x) { toast((x && x.message) || 'Not saved'); }); });
+    root.querySelectorAll('[data-sp-cfg-num]').forEach(function (e) { e.addEventListener('change', function () { var v = e.value.trim(); CELL.deskSpConfigura(e.getAttribute('data-sp-cfg-num'), v === '' ? '' : String(Math.max(1, Math.round(Number(v) || 0)))).then(function () { DESK = null; render(); toast('Setting saved'); }).catch(function (x) { toast((x && x.message) || 'Not saved'); }); }); });
+    all('[data-sp-seg-chiudi]', function (e) { var n = prompt('Note for the Desk log (optional)') || ''; CELL.deskSegnalazioneChiudi(e.getAttribute('data-sp-seg-chiudi'), n).then(function () { DESK = null; render(); }).catch(function (x) { toast((x && x.message) || 'Failed'); }); });
   }
 
   /* ======================= LA STANZA DEL DESK =======================
@@ -1592,7 +2028,7 @@
     function riga(p) {
       var stato = { approvato: 'approvato', rifiutato: 'rifiutato', sospeso: 'sospeso', in_attesa: 'pending' }[p.stato_account] || p.stato_account;
       return '<tr><td><span class="tnm">' + escHtml(p.nome || '—') + '</span><br><span class="mono" style="font-family:var(--mono);font-size:10.5px;color:var(--t3)">' + escHtml(p.email) + (p.ruolo === 'desk' ? ' · desk' : '') + '</span></td>' +
-        '<td>' + stato + '</td><td>' + (p.fondatore ? '<b>Fondatore</b>' : 'Member') + (p.presentato_da ? '<br><span style="font-size:10.5px;color:var(--t3)">introduced by ' + escHtml(p.presentato_da) + '</span>' : '') + (p.citta ? '<br><span style="font-size:10.5px;color:var(--t3)">' + escHtml(p.citta) + '</span>' : '') + '</td>' +
+        '<td>' + stato + '</td><td>' + (p.fondatore ? '<b>Fondatore</b>' : 'Member') + (p.presentato_da ? '<br><span style="font-size:10.5px;color:var(--t3)">introduced by ' + escHtml(p.presentato_da) + '</span>' : '') + (p.paese || p.citta ? '<br><span style="font-size:10.5px;color:var(--t3)">' + escHtml([p.paese, p.citta].filter(Boolean).join(' · ')) + '</span>' : '') + '</td>' +
         '<td>' + (p.pagato_fino_a ? fmtD(p.pagato_fino_a) : '—') + '</td><td>' + fmtDT(p.ultimo_accesso) + '<br><span style="font-size:10.5px;color:var(--t3)">' + (p.accessi || 0) + ' logins</span></td>' +
         '<td>' + escHtml(p.nota_desk || '') + '</td>' +
         '<td class="dk-az">' +
@@ -1605,7 +2041,7 @@
     }
     var testaTab = '<thead><tr><th>Person</th><th>Account</th><th>Member</th><th>Paid until</th><th>Last access</th><th>Note</th><th>Actions</th></tr></thead>';
     var rich = (DESK.richieste || []).map(function (r) {
-      return '<tr><td>' + fmtDT(r.creata_il) + '</td><td>' + ({ ammissione: 'Speakeasy', desk: 'Message', desiderata: 'Wish list', interesse: 'Interest' }[r.tipo] || r.tipo) + '</td><td>' + escHtml(r.nome || r.email || '') + '</td><td>' + escHtml(r.testo || '') + '</td><td>' + (r.stato === 'aperta' ? '<button type="button" class="btn sm" data-desk-chiudi="' + r.id + '">Close</button>' : 'chiusa') + '</td></tr>';
+      return '<tr><td>' + fmtDT(r.creata_il) + '</td><td>' + ({ ammissione: 'Admission', desk: 'Message', desiderata: 'Wish list', interesse: 'Interest' }[r.tipo] || r.tipo) + '</td><td>' + escHtml(r.nome || r.email || '') + '</td><td>' + escHtml(r.testo || '') + '</td><td>' + (r.stato === 'aperta' ? '<button type="button" class="btn sm" data-desk-chiudi="' + r.id + '">Close</button>' : 'chiusa') + '</td></tr>';
     }).join('');
     var acc = (DESK.accessi || []).map(function (a) { return '<tr><td>' + fmtDT(a.quando) + '</td><td>' + escHtml(a.nome || a.email || '') + '</td><td style="color:var(--t3);font-size:11px">' + escHtml(a.dispositivo || '') + '</td></tr>'; }).join('');
     var nots = (DESK.notifiche || []).map(function (n) { return '<tr><td>' + fmtDT(n.creata_il) + '</td><td>' + escHtml(n.tipo) + '</td><td style="white-space:pre-wrap;max-width:520px">' + escHtml(n.testo || '') + '</td><td>' + (n.inviata ? 'email inviata' : '<span style="color:var(--warn)">here only</span>' + (n.errore ? '<br><span style="font-size:10.5px;color:var(--t3)">' + escHtml(n.errore) + '</span>' : '')) + '</td></tr>'; }).join('');
@@ -1617,11 +2053,14 @@
       (attesa.length ? '<div class="tw"><table>' + testaTab + '<tbody>' + attesa.map(riga).join('') + '</tbody></table></div>' : '<p class="disc">No requests waiting.</p>') + '</section>' +
       '<section class="blk"><header class="blkh"><h3>Persone · ' + altre.length + '</h3><p>Account, plan, payments and sign-ins.</p></header><div class="tw"><table>' + testaTab + '<tbody>' + (altre.map(riga).join('') || '<tr><td colspan="7">No one yet.</td></tr>') + '</tbody></table></div></section>' +
       '<section class="blk"><header class="blkh"><h3>Requests and messages</h3><p>Speakeasy, wish list, messages to the Desk.</p></header><div class="tw"><table><thead><tr><th>When</th><th>Type</th><th>Who</th><th>Text</th><th></th></tr></thead><tbody>' + (rich || '<tr><td colspan="5">No requests.</td></tr>') + '</tbody></table></div></section>' +
+      '<section class="blk"><header class="blkh"><h3>Speakeasy · reports</h3><p>The Desk sees only this: members’ reports and negotiations not concluded. Listings, proposals and contact details stay between members.</p></header>' + deskSpeakeasyHtml(DESK.speakeasy) + '</section>' +
       '<section class="blk"><header class="blkh"><h3>Launch switches</h3><p>Change them here, without touching the code.</p></header><div class="dk-grid">' +
         sw('approvazione_richiesta', 'Account approval', 'Every new account waits until you approve it.') +
         sw('avvisa_accessi', 'Notice on every sign-in', 'A notice every time someone comes in.') +
         sw('pagamento_richiesto', 'Paid basic plan', 'When active, only those with "Paid until" in the future may enter.') +
-        '<div class="dk-sw"><div><b>Sign-ups</b><small>By introduction of a member (the club), open to all, or only to the addresses on the invitation list.</small></div><button type="button" class="btn sm' + (cfg.registrazione === 'presentazione' ? ' pri' : '') + '" data-cfg="registrazione" data-val="' + ({ presentazione: 'aperta', aperta: 'invito', invito: 'presentazione' }[cfg.registrazione] || 'presentazione') + '">' + ({ presentazione: 'By introduction', aperta: 'Open', invito: 'Invitation only' }[cfg.registrazione] || 'Open') + '</button></div>' +
+        '<div class="dk-sw"><div><b>Speakeasy</b><small>Open: everything. Paused: no new listings or proposals; contact details already shared and reports remain. Closed: the section disappears, My proposals remains.</small></div><button type="button" class="btn sm' + ((cfg.speakeasy_stato || 'aperto') === 'aperto' ? ' pri' : '') + '" data-sp-cfg="speakeasy_stato" data-val="' + ({ aperto: 'sospeso', sospeso: 'chiuso', chiuso: 'aperto' }[cfg.speakeasy_stato || 'aperto']) + '">' + ({ aperto: 'Open', sospeso: 'Paused', chiuso: 'Closed' }[cfg.speakeasy_stato || 'aperto']) + '</button></div>' +
+        '<div class="dk-sw"><div><b>Speakeasy · retention (days)</b><small>How many days after a negotiation closes photos and contact details are deleted. Empty: no automatic deletion. To be decided before opening to members.</small></div><input type="number" min="1" step="1" class="dk-num" data-sp-cfg-num="speakeasy_ritenzione_giorni" value="' + escHtml(cfg.speakeasy_ritenzione_giorni || '') + '" placeholder="—"></div>' +
+        '<div class="dk-sw"><div><b>Sign-ups</b><small>On a member’s introduction (the club), open to all, or only to the addresses on the invitation list.</small></div><button type="button" class="btn sm' + (cfg.registrazione === 'presentazione' ? ' pri' : '') + '" data-cfg="registrazione" data-val="' + ({ presentazione: 'aperta', aperta: 'invito', invito: 'presentazione' }[cfg.registrazione] || 'presentazione') + '">' + ({ presentazione: 'By introduction', aperta: 'Open', invito: 'Invitation only' }[cfg.registrazione] || 'Open') + '</button></div>' +
         '<div class="dk-sw"><div><b>Basic plan fee · € a year</b><small>To be decided. Shown on the entrance page when payment is active.</small></div><input type="number" min="0" step="10" class="dk-num" data-cfg-num="quota_private" value="' + escHtml(cfg.quota_private || '0') + '"></div>' +
         '<div class="dk-sw"><div><b>Speakeasy fee · € a year</b><small>Shown at the Speakeasy door.</small></div><input type="number" min="0" step="10" class="dk-num" data-cfg-num="quota_club" value="' + escHtml(cfg.quota_club || '900') + '"></div>' +
       '</div></section>' +
@@ -2016,6 +2455,99 @@
     });
   }
 
+
+  /* ======================= scatto rapido =======================
+     Un tocco, la fotocamera, la foto va in coda e la lettura dell'etichetta
+     parte da sola appena il salvataggio è finito. Si può scattare la prossima
+     mentre la precedente viene letta: le letture si mettono in fila. */
+  var letture = {}, codaLetture = Promise.resolve();
+  function rapidoPreferito() {
+    return !!(window.matchMedia && (window.matchMedia('(max-width:640px)').matches || window.matchMedia('(pointer:coarse)').matches));
+  }
+  function rapidoHtml() {
+    if (isReadOnly) return '';
+    var n = Object.keys(letture).filter(function (k) { return letture[k].stato !== 'ko'; }).length;
+    return '<input type="file" accept="image/*" capture="environment" id="rapido-in" class="rapido-in" aria-hidden="true" tabindex="-1">' +
+      '<input type="file" accept="image/*" capture="environment" id="retro-in" class="rapido-in" aria-hidden="true" tabindex="-1">' +
+      '<button type="button" class="fab" id="fab-scatta" aria-label="Snap a bottle label">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h1.6l1.2-2h5.4l1.2 2h1.6A2.5 2.5 0 0 1 20 8.5v8A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5z"/><circle cx="12" cy="12.5" r="3.4"/></svg>' +
+      '<span>Scatta</span>' + (n ? '<span class="fab-n">' + n + '</span>' : '') + '</button>';
+  }
+  function statoLettura(b) {
+    var l = letture[b.id];
+    if (l && l.stato === 'leggo') return '<div class="mt"><span class="pl lett">reading the label…</span></div><div class="nm">One moment</div><div class="mk">Name, estate, vintage and grapes are on their way</div>';
+    if (l && l.stato === 'salvo') return '<div class="mt"><span class="pl lett">saving the photo…</span></div><div class="nm">To catalogue</div><div class="mk">Once saved, the label is read</div>';
+    if (l && l.stato === 'ko') return '<div class="mt"><span class="pl ko">reading failed</span></div><div class="nm">To catalogue</div><div class="mk">' + escHtml(l.msg || 'Try again or fill in by hand') + '</div>';
+    return '<div class="mt"><span class="pl">in progress</span></div><div class="nm">To catalogue</div><div class="mk">Waiting for the label to be read</div>';
+  }
+  function azioniCoda(b) {
+    if (isReadOnly) return '';
+    var l = letture[b.id], occupata = l && (l.stato === 'leggo' || l.stato === 'salvo');
+    return (b.foto_retro || occupata ? '' : '<button type="button" class="btn sm retro" data-retro-di="' + b.id + '">Add the back</button>') +
+      (l && l.stato === 'ko' ? '<button type="button" class="btn sm pri retro" data-rileggi="' + b.id + '">Retry the reading</button>' : '');
+  }
+  function apriRapido() { var i = document.getElementById('rapido-in'); if (i) { i.value = ''; i.click(); } }
+  function attendiSalvataggio() {
+    return new Promise(function (res) {
+      var n = 0;
+      (function giro() { if (!saving && !attesa) return res(true); if (++n > 240) return res(false); setTimeout(giro, 250); })();
+    });
+  }
+  function fotoSulServer(b) { return !!b && (!b.foto_fronte || b.foto_fronte.slice(0, 5) !== 'data:') && (!b.foto_retro || b.foto_retro.slice(0, 5) !== 'data:'); }
+  function leggiAppena(id) {
+    letture[id] = { stato: 'salvo' }; render();
+    codaLetture = codaLetture.then(function () {
+      return attendiSalvataggio().then(function () {
+        var b = STATE.bottles.find(function (x) { return x.id === id; });
+        if (!b || !inCoda(b)) { delete letture[id]; render(); return; }
+        if (!window.CELL || !CELL.cataloga) { letture[id] = { stato: 'ko', msg: 'The engine cannot be reached from here' }; render(); return; }
+        if (!fotoSulServer(b)) { letture[id] = { stato: 'ko', msg: 'Photo not saved yet: try again shortly' }; render(); return; }
+        letture[id] = { stato: 'leggo' }; render();
+        return CELL.cataloga(id).then(function () { return CELL.carica(); }).then(function (nuovo) {
+          delete letture[id]; idrata(nuovo); render();
+          var l = STATE.bottles.find(function (x) { return x.id === id; });
+          toast(l && l.nome ? 'Letta: ' + l.nome : 'Label read');
+        }).catch(function (e) {
+          letture[id] = { stato: 'ko', msg: (e && e.message) || 'Reading failed' }; render();
+          toast('Reading failed: ' + ((e && e.message) || 'riprova'));
+        });
+      });
+    });
+  }
+  function scattoRapido(file) {
+    if (!file) return;
+    toast('Preparing the photo…');
+    toDataUrl(file, FOTO_MAX_DIM, FOTO_QUALITA).then(function (u) {
+      var b = nuova(u, '', null);
+      commit(function (ns) { ns.bottles.unshift(b); }, false);
+      leggiAppena(b.id);
+    }).catch(function () { toast('Unreadable image, try again'); });
+  }
+  var retroPer = null;
+  function retroRapido(file) {
+    var id = retroPer; retroPer = null;
+    if (!file || !id) return;
+    toast('Preparing the back…');
+    toDataUrl(file, FOTO_MAX_DIM, FOTO_QUALITA).then(function (u) {
+      commit(function (ns) { var x = ns.bottles.find(function (y) { return y.id === id; }); if (x) x.foto_retro = u; }, false);
+      var b = STATE.bottles.find(function (x) { return x.id === id; });
+      if (b && inCoda(b)) leggiAppena(id); else toast('Back added');
+    }).catch(function () { toast('Unreadable image, try again'); });
+  }
+  function bindRapido(root) {
+    var on = function (id, ev, fn) { var e = document.getElementById(id); if (e) e.addEventListener(ev, fn); };
+    on('fab-scatta', 'click', apriRapido);
+    on('rapido-in', 'change', function (e) { scattoRapido(e.target.files && e.target.files[0]); });
+    on('retro-in', 'change', function (e) { retroRapido(e.target.files && e.target.files[0]); });
+    root.querySelectorAll('[data-retro-di]').forEach(function (btn) {
+      btn.addEventListener('click', function (ev) { ev.stopPropagation(); retroPer = btn.getAttribute('data-retro-di'); var i = document.getElementById('retro-in'); if (i) { i.value = ''; i.click(); } });
+    });
+    root.querySelectorAll('[data-rileggi]').forEach(function (btn) {
+      btn.addEventListener('click', function (ev) { ev.stopPropagation(); leggiAppena(btn.getAttribute('data-rileggi')); });
+    });
+  }
+  window.CAVEAU_RAPIDO = { scatta: scattoRapido, letture: function () { return letture; } };
+
   function toast(m) {
     var o = document.querySelector('.toast'); if (o) o.remove();
     var t = document.createElement('div'); t.className = 'toast'; t.textContent = m;
@@ -2169,6 +2701,7 @@
           (stanza === z.k ? ' aria-current="page"' : '') + '><span class="nvn tab">' + z.n + '</span>' + z.t + '</button>';
       }).join('') + '</div>' +
       '<button type="button" class="nvb" data-lingua-switch title="Italiano / English">' + (window.CAVEAU_LINGUA === 'en' ? 'IT' : 'EN') + '</button>' +
+      '<button type="button" class="nvb" id="sp-profilo-apri" title="My profile">Profile</button>' +
       '<button type="button" class="nvb esci" id="esci" title="Close the session">Sign out</button>' +
       '</div></nav>';
   }
@@ -2236,7 +2769,7 @@
       var a = ACC[ai++ % ACC.length];
       return '<div class="lc" style="--ac:var(' + a + ')"><div class="n tab">' + n + (extra || '') + '</div><div class="c">' + c + '</div></div>';
     }
-    return '<header class="mast"><div class="mast-in">' +
+    return '<header class="mast st-' + stanza + '"><div class="mast-in">' +
       '<button class="rtog btn sm gho" id="rtog" type="button" style="margin-bottom:12px">☰ Filters</button>' +
       '<div class="eb">Caveau · your cellar · you alone</div>' +
       '<div class="brand">' + MARCHIO + '<h1>' + escHtml(STATE.meta.titolo) + '</h1></div>' +
@@ -2364,7 +2897,7 @@
       }).join('') + '</div>' +
       '<button class="btn gho sm" id="export" type="button">CSV</button>' +
       (isReadOnly ? '' : '<button class="btn gho sm" id="manual" type="button">Manual</button><button class="btn gho sm" type="button" data-mappa-open title="Sections, shelves and levels of your cellar">Map</button>') +
-      '</div>';
+      '</div>' + rapidoHtml();
   }
 
   function demoNote() {
@@ -2454,8 +2987,7 @@
         '<div class="vit">' + art(b) + stampOf(b) + (b.esempio ? '<span class="stamp dem">example</span>' : '') + '</div>' +
         '<div class="bd">' +
         (coda
-          ? '<div class="mt"><span class="pl">in progress</span></div>' +
-            '<div class="nm">To catalogue</div><div class="mk">Waiting for the label to be read</div>' + bottoneFoto(b)
+          ? statoLettura(b) + bottoneFoto(b) + azioniCoda(b)
           : '<div class="mt">' + tagLiquido(b) + badge(b) + tagAnnuncio(b) + '</div>' +
             '<div class="can"><span>' + escHtml(b.produttore || b.cantina || '\u2014') + '</span></div>' +
             '<div class="nm">' + escHtml(b.nome || 'Unnamed') + '</div>' +
@@ -2520,7 +3052,7 @@
         (haFoto(b) ? bottoneFoto(b, 'See the photos') : '<span class="d-act off">No photo</span>') + '</div>' +
 
       '<div class="d-state"><span class="k">Stato</span><span class="v">' + escHtml(STATI[b.stato] || '—') +
-        (b.esempio ? ' · example' : '') + (b.annuncio ? ' · ' + ANNUNCI[b.annuncio] : '') + '</span></div>' +
+        (b.esempio ? ' · example' : '') + (annuncioDiBottiglia(b.id) ? ' · On the board' : '') + '</span></div>' +
       '</article>';
   }
 
@@ -2909,6 +3441,8 @@
 
   /* ======================= schede modali ======================= */
   function sheets() {
+    if (profiloOpen) return profiloSheet();
+    if (spForm) return formAnnuncioSheet();
     if (mappaOpen) return mappaSheet();
     if (viewing) return fotoSheet();
     if (shooting) return shootSheet();
@@ -3011,7 +3545,7 @@
       '<label><span class="lbl">Valuation date</span><input type="date" id="i-vdata" value="' + escHtml(b.valore_data) + '"></label>' +
       '<label><span class="lbl">Valuation source</span><input type="text" id="i-vfonte" placeholder="e.g. Wine-Searcher" value="' + escHtml(b.valore_fonte) + '"></label>' +
       '<label class="full"><span class="lbl">Note</span><textarea id="i-note" rows="2">' + escHtml(b.note) + '</textarea></label>' +
-      (isNew || out ? '' : '<div class="full"><span class="lbl">Speakeasy · the board between members</span><div class="posgrid"><label><span class="lbl">Listing</span><select id="i-annuncio"><option value=""' + (!b.annuncio ? ' selected' : '') + '>None · stays private</option><option value="vendita"' + (b.annuncio === 'vendita' ? ' selected' : '') + '>For sale</option><option value="scambio"' + (b.annuncio === 'scambio' ? ' selected' : '') + '>For exchange</option></select></label><label><span class="lbl">Price between members €</span><input type="number" step="1" id="i-prezzo-soci" value="' + (b.prezzo_soci != null ? b.prezzo_soci : '') + '" placeholder="' + (vetrina(b) ? 'fuori vale ' + Math.round(vetrina(b)) : 'if you wish') + '"></label><label class="chk" style="align-self:end"><input type="checkbox" id="i-anonimo"' + (b.anonimo ? ' checked' : '') + '> Anonymously</label></div><p class="hint">On the board members see the bottle, the estimated value outside and your price, with your name unless anonymous. Caveau takes nothing.</p></div>') +
+      (isNew || out || b.esempio ? '' : '<div class="full sp-scheda"><span class="lbl">Speakeasy · the club board</span>' + (annuncioDiBottiglia(b.id) ? '<p class="hint">This bottle is on the board' + (annuncioDiBottiglia(b.id).stato === 'in_trattativa' ? ', in negotiation' : '') + '. <button type="button" class="lnk" id="sp-in-bacheca">Gestiscila in Le mie proposte</button></p>' : '<p class="hint">Only if you wish: the bottle appears to members, for sale at a total price for the lot or for swap. The rest of the cellar stays private.</p><span><button type="button" class="btn sm" data-sp-pubblica="' + b.id + '">Put on the board</button></span>') + '</div>') +
       (isNew ? '<label class="full"><span class="lbl">Photo · optional</span><input type="file" accept="image/*" id="i-foto"><p class="hint">If you want the sheet to fill itself in, use “Photograph a bottle” instead.</p></label>' : '') +
       '</div></form></div>' +
       '<div class="shf">' +
@@ -3037,8 +3571,9 @@
     });
     on('export', 'click', exportCSV);
     on('cataloga', 'click', catalogaCoda);
-    on('shoot', 'click', openShoot);
-    on('shoot-empty', 'click', openShoot);
+    on('shoot', 'click', function () { if (rapidoPreferito()) apriRapido(); else openShoot(); });
+    on('shoot-empty', 'click', function () { if (rapidoPreferito()) apriRapido(); else openShoot(); });
+    bindRapido(root);
     on('bulkbtn', 'click', function () { bulkPhotos = []; bulk = true; render(); });
     on('manual', 'click', function () { editingId = 'new'; render(); });
     on('rmdemo', 'click', function () {
@@ -3183,7 +3718,7 @@
         toast('Preparing the photo…');
         toDataUrl(f, FOTO_MAX_DIM, FOTO_QUALITA).then(function (u) {
           formPhotos[w] = u; var keep = valOf('sh-prezzo'); render(); setVal('sh-prezzo', keep);
-        }).catch(function () { toast('Image unreadable, try again'); });
+        }).catch(function () { toast('Unreadable image, try again'); });
       });
     });
     root.querySelectorAll('[data-redo]').forEach(function (btn) {
@@ -3250,7 +3785,7 @@
     if (viewing) { ev.preventDefault(); viewing = null; render(); return; }   // la foto si chiude per prima
     if (editingId || shooting || bulk) { ev.preventDefault(); shut(); }
   }
-  function shut() { editingId = null; shooting = false; bulk = false; viewing = null; mappaOpen = false; mappaDraft = null; formPhotos = { fronte: '', retro: '' }; bulkPhotos = []; render(); }
+  function shut() { profiloOpen = false; spDopoProfilo = null; spForm = null; editingId = null; shooting = false; bulk = false; viewing = null; mappaOpen = false; mappaDraft = null; formPhotos = { fronte: '', retro: '' }; bulkPhotos = []; render(); }
   function openShoot() { formPhotos = { fronte: '', retro: '' }; shooting = true; render(); }
   function valOf(id) { var e = document.getElementById(id); return e ? e.value : ''; }
   function setVal(id, v) { var e = document.getElementById(id); if (e) e.value = v; }
@@ -3273,7 +3808,7 @@
       nome: '', tipologia: '', colore: '', produttore: '', cantina: '', annata: '', annata_migliore: '',
       gradazione: '', provenienza: '', vitigni: [], formato: '', quantita: 1,
       zona: (pos && pos.zona) || '', scaffale: (pos && pos.scaffale) || '', ripiano: (pos && pos.ripiano) || '',
-      club: 'privata', annuncio: null, prezzo_soci: null, anonimo: false,
+      club: 'privata',
       prezzo_acquisto: p != null ? p : null, valore_attuale: null, valore_data: '', valore_fonte: '', note: '', campi_incerti: [] };
   }
   function saveShot(again) {
@@ -3304,8 +3839,7 @@
       quantita: Number(g('i-qta')) || 1,
       prezzo_acquisto: num(g('i-pacq')), valore_attuale: num(g('i-val')),
       valore_data: g('i-vdata'), valore_fonte: g('i-vfonte'), note: g('i-note'),
-      club: g('i-club') || 'privata',
-      annuncio: g('i-annuncio') || null, prezzo_soci: num(g('i-prezzo-soci')), anonimo: !!((document.getElementById('i-anonimo') || {}).checked)
+      club: g('i-club') || 'privata'
     };
   }
   function submit() {
@@ -3418,7 +3952,7 @@
   window.CAVEAU = {
     avvia: function (stato, profilo) { if (profilo) PROFILO = profilo; idrata(stato); ensureStyle(); render(); },
     ricarica: function (stato, profilo) { if (profilo) PROFILO = profilo; idrata(stato); render(); },
-    versione: '19.1'
+    versione: '20.0'
   };
 
 })();
@@ -3428,7 +3962,8 @@
 (function () {
   var D = { 'Vino': 'Wine', 'Spumante': 'Sparkling', 'Liquore': 'Liqueur', 'Altro': 'Other', 'Rosso': 'Red', 'Bianco': 'White',
     'Rossi': 'Reds', 'Bianchi e rosati': 'Whites and rosés', 'Bollicine': 'Sparkling', 'Distillati e liquori': 'Spirits and liqueurs',
-    'Cantina': 'Cellar', 'La mia cantina': 'My cellar', 'Senza posizione': 'No position', 'Fuori mappa': 'Off the map' };
+    'Cantina': 'Cellar', 'La mia cantina': 'My cellar', 'Senza posizione': 'No position', 'Fuori mappa': 'Off the map',
+    'Rosato': 'Rosé', 'Dolce': 'Sweet', 'Fortificato': 'Fortified', 'Altro distillato': 'Other spirit', 'Vendo': 'Selling', 'Scambio': 'Swap', 'Distillato': 'Spirit' };
   function walk(n) {
     if (n.nodeType === 3) { var t = n.nodeValue, k = t.trim(); if (D[k]) n.nodeValue = t.replace(k, D[k]); return; }
     if (n.nodeType !== 1 || /^(SCRIPT|STYLE|INPUT|TEXTAREA)$/.test(n.tagName)) return;

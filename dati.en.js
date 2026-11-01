@@ -75,7 +75,6 @@
       regalata_a: t(b.regalata_a),
       esempio: !!b.esempio,
       club: uno(b.club, ['privata', 'segnalata', 'vendita']) || 'privata',
-      annuncio: uno(b.annuncio, ['vendita', 'scambio']) || null, prezzo_soci: n(b.prezzo_soci), anonimo: !!b.anonimo,
       aggiunta_il: d(b.aggiunta_il) || oggi()
     };
   }
@@ -106,7 +105,6 @@
       regalata_il: s(r.regalata_il), regalata_a: s(r.regalata_a),
       esempio: !!r.esempio,
       club: s(r.club) || 'privata',
-      annuncio: s(r.annuncio) || null, prezzo_soci: r.prezzo_soci == null ? null : Number(r.prezzo_soci), anonimo: !!r.anonimo, annunciata_il: s(r.annunciata_il),
       storico: storico || []
     };
   }
@@ -172,7 +170,7 @@
       headers: { 'content-type': 'application/json', apikey: CHIAVE, authorization: 'Bearer ' + CHIAVE },
       body: JSON.stringify({ email: String(email || '').trim().toLowerCase(), lingua: lingua || 'it' })
     }).then(function (risp) {
-      if (!risp.ok) throw new Error('Non sono riuscito a mandare il link. Riprova fra poco.');
+      if (!risp.ok) throw new Error('The link could not be sent. Try again shortly.');
       return true;
     });
   }
@@ -191,14 +189,15 @@
   /* il profilo: chi sono e che piano ho */
   function profilo() {
     return Promise.all([
-      sb.from('profili').select('nome,email,piano,club_fino_a,ruolo,stato_candidatura,fondatore,citta').eq('id', utente.id).maybeSingle(),
+      sb.from('profili').select('nome,email,piano,club_fino_a,ruolo,stato_candidatura,fondatore,citta,citta_visibile,paese,lingua,interessi,descrizione').eq('id', utente.id).maybeSingle(),
       sb.from('configurazione').select('valore').eq('chiave', 'quota_club').maybeSingle()
     ]).then(function (r) {
       var p = (r[0] && r[0].data) || {};
       return {
         nome: s(p.nome), email: s(p.email || (utente && utente.email)),
         piano: p.piano || 'private', club_fino_a: s(p.club_fino_a), ruolo: p.ruolo || 'utente',
-        stato_candidatura: p.stato_candidatura || 'nessuna', fondatore: !!p.fondatore, citta: s(p.citta),
+        stato_candidatura: p.stato_candidatura || 'nessuna', fondatore: !!p.fondatore, citta: s(p.citta), citta_visibile: !!p.citta_visibile,
+        paese: s(p.paese), lingua: p.lingua || 'it', interessi: a(p.interessi), descrizione: s(p.descrizione), completo: !!(s(p.nome).trim() && s(p.paese).trim()),
         quota_club: (r[1] && r[1].data && r[1].data.valore) || null
       };
     });
@@ -210,19 +209,50 @@
     var disp = (navigator.userAgent || '').replace(/\(KHTML, like Gecko\)/, '').slice(0, 160);
     return sb.rpc('registra_accesso', { dispositivo: disp }).then(function () { return avvisa('accesso', ''); }).catch(function () { return null; });
   }
-  function avvisa(tipo, dettaglio, email, bottigliaId) { return chiama('avvisa', { tipo: tipo, dettaglio: dettaglio || '', email: email || '', bottiglia_id: bottigliaId || '' }); }
-  /* lo Speakeasy e i soci: funzioni del database che decidono loro cosa mostrare a chi */
-  function bacheca() { return sb.rpc('speakeasy_bacheca').then(function (r) { if (r.error) throw tradurre(r.error); return r.data || []; }); }
-  function soci() { return sb.rpc('soci_elenco').then(function (r) { if (r.error) throw tradurre(r.error); return r.data || []; }); }
-  function aggiornaCitta(c) { return sb.rpc('mio_profilo_aggiorna', { nuova_citta: c || '' }).then(function (r) { if (r.error) throw tradurre(r.error); return true; }); }
-  function deskFondatore(email, valore) { return sb.rpc('desk_fondatore', { email_socio: email, valore: !!valore }).then(function (r) { if (r.error) throw tradurre(r.error); return true; }); }
+  function avvisa(tipo, dettaglio, email, riferimento) { return chiama('avvisa', { tipo: tipo, dettaglio: dettaglio || '', email: email || '', interesse_id: riferimento || '' }); }
+  /* lo Speakeasy: funzioni del database che decidono loro cosa mostrare a chi.
+     Nessuna tabella dello Speakeasy si legge direttamente. */
+  function rpc(nome, args) { return sb.rpc(nome, args || {}).then(function (r) { if (r.error) throw tradurre(r.error); return r.data; }); }
+  function speakeasy() {
+    return Promise.all([rpc('speakeasy_config'), rpc('bacheca'), rpc('le_mie_proposte'), rpc('membri')])
+      .then(function (r) { return { cfg: r[0] || {}, bacheca: r[1] || [], proposte: r[2] || {}, membri: r[3] || [] }; });
+  }
+  function spMembro(codice) { return rpc('membro_profilo', { p_codice: codice }); }
+  function mioProfilo() { return rpc('mio_profilo'); }
+  function salvaProfilo(p) { return rpc('mio_profilo_salva', { p_nome: p.nome, p_paese: p.paese, p_citta: p.citta || '', p_citta_visibile: !!p.citta_visibile, p_lingua: p.lingua || 'it', p_interessi: p.interessi || [], p_descrizione: p.descrizione || '' }); }
+  function spRiapri(id) { return rpc('annuncio_riapri', { p_id: id }); }
+  function spPubblica(p) { return rpc('annuncio_pubblica', { p: p }); }
+  function spModifica(id, p) { return rpc('annuncio_modifica', { p_id: id, p: p }); }
+  function spRinnova(id) { return rpc('annuncio_rinnova', { p_id: id }); }
+  function spRitira(id) { return rpc('annuncio_ritira', { p_id: id }); }
+  function spInteressa(annuncioId, prezzo, messaggio, r) { return rpc('interesse_invia', { p_annuncio: annuncioId, p_prezzo: prezzo == null ? null : prezzo, p_messaggio: messaggio || '', p_email_ok: !!r.email_ok, p_telefono: r.telefono || '', p_altro: r.altro || '' }); }
+  function spControproponi(id, prezzo, testo, r) { return rpc('interesse_controproponi', { p_interesse: id, p_controprezzo: prezzo == null ? null : prezzo, p_controtesto: testo || '', p_email_ok: !!r.email_ok, p_telefono: r.telefono || '', p_altro: r.altro || '' }); }
+  function spAccetta(id, r) { return rpc('interesse_accetta', { p_interesse: id, p_email_ok: !!r.email_ok, p_telefono: r.telefono || '', p_altro: r.altro || '' }); }
+  function spRiconferma(id, r) { return rpc('interesse_riconferma', { p_interesse: id, p_email_ok: !!r.email_ok, p_telefono: r.telefono || '', p_altro: r.altro || '' }); }
+  function spChiudiInteresse(id) { return rpc('interesse_chiudi', { p_interesse: id }); }
+  function spContatti(id) { return rpc('contatti_accordo', { p_interesse: id }); }
+  function spEsito(id, esito, nota) { return rpc('esito_dichiara', { p_interesse: id, p_esito: esito, p_nota: nota || '' }); }
+  function spUscita(id, bottigliaId, quantita) { return rpc('conferma_uscita', { p_interesse: id, p_bottiglia: bottigliaId || null, p_quantita: quantita || null }); }
+  function spSegnala(annuncioId, interesseId, motivo) { return rpc('segnala', { p_annuncio: annuncioId || null, p_interesse: interesseId || null, p_motivo: motivo }); }
+  function spFotoCarica(blob) {
+    var percorso = utente.id + '/' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8) + '.jpg';
+    return sb.storage.from('annunci').upload(percorso, blob, { upsert: false, contentType: 'image/jpeg' }).then(function (r) { if (r.error) throw tradurre(r.error); return percorso; });
+  }
+  function spFotoUrl(percorsi) {
+    if (!percorsi || !percorsi.length) return Promise.resolve({});
+    return sb.storage.from('annunci').createSignedUrls(percorsi, FIRMA_SEC).then(function (r) { var m = {}; (r.data || []).forEach(function (x) { if (x && x.path && x.signedUrl) m[x.path] = x.signedUrl; }); return m; }).catch(function () { return {}; });
+  }
+  function deskSpConfigura(chiave, valore) { return rpc('desk_speakeasy_configura', { p_chiave: chiave, p_valore: valore }); }
+  function deskSegnalazioneChiudi(id, nota) { return rpc('desk_segnalazione_chiudi', { p_id: id, p_nota: nota || '' }); }
+  function deskFondatore(email, valore) { return rpc('desk_fondatore', { email_socio: email, valore: !!valore }).then(function () { return true; }); }
   function desk() {
     return Promise.all([
-      sb.from('profili').select('id,email,nome,piano,ruolo,stato_account,stato_candidatura,pagato_fino_a,club_fino_a,ultimo_accesso,accessi,nota_desk,creato_il,fondatore,presentato_da,citta').order('creato_il', { ascending: false }),
+      sb.from('profili').select('id,email,nome,piano,ruolo,stato_account,stato_candidatura,pagato_fino_a,club_fino_a,ultimo_accesso,accessi,nota_desk,creato_il,fondatore,presentato_da,citta,paese').order('creato_il', { ascending: false }),
       sb.from('richieste').select('id,tipo,testo,stato,creata_il,profilo_id').order('creata_il', { ascending: false }).limit(100),
       sb.from('accessi').select('quando,dispositivo,profilo_id').order('quando', { ascending: false }).limit(40),
       sb.from('notifiche').select('tipo,testo,inviata,errore,creata_il').order('creata_il', { ascending: false }).limit(40),
-      sb.from('configurazione').select('chiave,valore')
+      sb.from('configurazione').select('chiave,valore'),
+      sb.rpc('desk_segnalazioni').then(function (r) { return { data: r.error ? null : r.data }; })
     ]).then(function (res) {
       res.forEach(function (r) { if (r.error) throw tradurre(r.error); });
       var persone = res[0].data || [], byId = {};
@@ -233,7 +263,8 @@
         richieste: (res[1].data || []).map(function (r) { var p = byId[r.profilo_id] || {}; r.nome = p.nome; r.email = p.email; return r; }),
         accessi: (res[2].data || []).map(function (a) { var p = byId[a.profilo_id] || {}; a.nome = p.nome; a.email = p.email; return a; }),
         notifiche: res[3].data || [],
-        configurazione: cfg
+        configurazione: cfg,
+        speakeasy: (res[5] && res[5].data) || null
       };
     });
   }
@@ -263,6 +294,26 @@
      volta sola, così l'interfaccia non deve mai indovinare cosa è successo. */
   function tradurre(err) {
     var m = String((err && err.message) || err || '');
+    var SP_ERR = {
+      sp_non_membro: 'The Speakeasy is reserved for approved members.', sp_sospeso: 'The Speakeasy is paused: no new proposals for now.', sp_chiuso: 'The Speakeasy is closed.',
+      sp_profilo_incompleto: 'Complete your profile first: name, country and language.', sp_troppi_annunci: 'You already have the maximum number of bottles on the board: withdraw one or wait for one to conclude.',
+      sp_bottiglia_non_tua: 'This bottle is not in your cellar.', sp_bottiglia_non_disponibile: 'This bottle is no longer available in the cellar.', sp_gia_in_bacheca: 'This bottle is already on the board.',
+      sp_annuncio_non_trovato: 'Listing not found.', sp_annuncio_non_modificabile: 'The listing is in negotiation: declare the outcome first.', sp_annuncio_non_disponibile: 'This bottle is no longer available.',
+      sp_annuncio_non_rinnovabile: 'This listing cannot be renewed.', sp_annuncio_non_ritirabile: 'This listing cannot be withdrawn.', sp_prima_dichiara_esito: 'A negotiation is under way: say how it went first.',
+      sp_e_tuo: 'This is your own bottle.', sp_interesse_gia_inviato: 'You already have a pending proposal on this bottle.', sp_prezzo_obbligatorio: 'The total price for the lot is needed.', sp_prezzo_non_valido: 'Invalid price.',
+      sp_prezzo_non_previsto: 'No price is set for a swap.', sp_proposta_non_trovata: 'Proposal not found.', sp_non_tuo: 'This proposal does not concern you.', sp_non_tocca_a_te: 'The answer is now up to the other member.',
+      sp_proposta_non_modificabile: 'This proposal can no longer be changed.', sp_proposta_superata: 'The terms have changed: the proposal must be made again.', sp_proposta_non_accettabile: 'This proposal can no longer be accepted.',
+      sp_gia_in_trattativa: 'Another proposal is already in negotiation on this bottle.', sp_serve_un_recapito: 'Choose at least one contact detail.', sp_recapiti_mancanti: 'One of the two parties has not provided contact details.',
+      sp_contatti_non_disponibili: 'Contact details are shown only after you have both accepted.', sp_contatti_scaduti: 'The contact details of this negotiation are no longer kept.',
+      sp_esito_non_dichiarabile: 'There is no negotiation to close.', sp_esito_gia_dichiarato: 'The outcome has already been declared.', sp_esito_non_valido: 'Invalid outcome.',
+      sp_uscita_non_prevista: 'No removal to record for this negotiation.', sp_bottiglia_mancante: 'Indicate which bottle has gone.', sp_motivo_obbligatorio: 'Write the reason for the report.',
+      sp_solo_desk: 'Desk only.', sp_nome_obbligatorio: 'Your name is needed.', sp_paese_obbligatorio: 'Your country is needed.', sp_tipo_non_modificabile: 'Selling or swap cannot be changed: withdraw and list again.',
+      sp_tipo_non_valido: 'Choose selling or swap.', sp_categoria_non_valida: 'Choose wine or spirit.', sp_nome_bottiglia_obbligatorio: 'The label is needed.', sp_lotto_non_valido: 'Invalid lot quantity.', sp_valore_non_valido: 'Invalid value.',
+      sp_lotto_oltre_giacenza: 'The lot exceeds the bottles you have in the cellar.', sp_controproposta_vuota: 'Write what you propose in exchange.', sp_annuncio_non_riapribile: 'This listing is not paused.',
+      sp_segnalazione_incoerente: 'Report inconsistent with the proposal.', sp_lingua_non_valida: 'Invalid language.', sp_chiave_non_modificabile: 'Setting cannot be changed.'
+    };
+    var cod = (m.match(/\bsp_[a-z_]+\b/) || [])[0];
+    if (cod && SP_ERR[cod]) return new Error(SP_ERR[cod]);
     if (/invalid login credentials|invalid_credentials/i.test(m))
       return new Error('Email or password don’t match. Try again, or request a new password.');
     if (/email not confirmed/i.test(m))
@@ -532,7 +583,11 @@
     salva: salva,
     cataloga: cataloga,
     verificaLink: verificaLink, scambiaCodice: scambiaCodice,
-    bacheca: bacheca, soci: soci, aggiornaCitta: aggiornaCitta, deskFondatore: deskFondatore,
+    speakeasy: speakeasy, spMembro: spMembro, mioProfilo: mioProfilo, salvaProfilo: salvaProfilo,
+    spPubblica: spPubblica, spModifica: spModifica, spRinnova: spRinnova, spRiapri: spRiapri, spRitira: spRitira,
+    spInteressa: spInteressa, spControproponi: spControproponi, spAccetta: spAccetta, spRiconferma: spRiconferma, spChiudiInteresse: spChiudiInteresse,
+    spContatti: spContatti, spEsito: spEsito, spUscita: spUscita, spSegnala: spSegnala, spFotoCarica: spFotoCarica, spFotoUrl: spFotoUrl,
+    deskSpConfigura: deskSpConfigura, deskSegnalazioneChiudi: deskSegnalazioneChiudi, deskFondatore: deskFondatore,
     utente: function () { return utente; },
     cantina: function () { return cantina; }
   };

@@ -24,11 +24,9 @@ guscio vuoto: nessuna cantina, nessuna foto, nessuno storico.
 
 ## Struttura
 
-    index.html              la porta: iscrizione (con chi ti presenta), ingresso, password dimenticata
-    privacy.html            l'informativa sulla privacy (italiano e inglese)
-    app.js                  l'applicazione (italiano)
-    dati.js                 l'unico file che parla col database (italiano)
-    app.en.js, dati.en.js   gli stessi due file in inglese
+    index.html              la porta: iscrizione con email e password, oppure ingresso
+    app.js                  l'applicazione
+    dati.js                 l'unico file che parla col database
     supabase.js             la libreria del database
     sw.js                   il guardiano dell'involucro (installazione e rete lenta)
     manifest.webmanifest    quello che rende l'app installabile
@@ -37,11 +35,11 @@ guscio vuoto: nessuna cantina, nessuna foto, nessuno storico.
 ## Pubblicare una versione nuova
 
 1. Sostituisci i file.
-2. Cambia `VERSIONE` in `sw.js` (es. `caveau-19.1`).
+2. Cambia `VERSIONE` in `sw.js` (es. `caveau-16.1`).
 
 Senza il passo 2 chi ha già installato l'app continua a vedere la versione
 vecchia: il guardiano serve la copia che ha in cache finché il nome non cambia.
 
-## Soci
+## Piani
 
-Ci si iscrive indicando chi ti presenta; il Desk approva dalla stanza **05 Desk** dell'app. Chi è approvato è socio del club: una cantina privata, lo Speakeasy (la bacheca fra soci) e l'elenco dei soci. Il Desk segna i fondatori con il bottone **Fondatore**. La modalità di iscrizione (`aperta`, `invito` o `presentazione`) e la quota stanno nella tabella `configurazione`.
+Ogni persona si iscrive da sola e ha la sua cantina (piano `private`). Il piano `club` apre la stanza Speakeasy: lo imposta il desk con `select desk_imposta('email', 'club');` dal database, dopo colloquio e quota. La modalità di iscrizione (`aperta` o `invito`) sta nella tabella `configurazione`.

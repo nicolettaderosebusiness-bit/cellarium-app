@@ -6,7 +6,7 @@
    una cantina vecchia credendola aggiornata.
    Per pubblicare una versione nuova basta cambiare VERSIONE.
    ============================================================= */
-var VERSIONE = 'caveau-19.1';
+var VERSIONE = 'caveau-20.0';
 
 var INVOLUCRO = [
   './',
